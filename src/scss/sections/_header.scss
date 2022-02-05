@@ -91,12 +91,6 @@
     }
 }
 .logo {
-    padding-left: 29px;
-    margin-left: auto;
-    @include  media-md {
-        margin-left: 0;
-        padding-left: 0;
-    }
     img {
         width: 120px;
         transform: translateY(0) translateX(0) scale(1);
