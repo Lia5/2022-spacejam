@@ -17,18 +17,17 @@
 	box-sizing: border-box;
 }
 html {
-	height: 100%;
+	height: auto;
 	width: 100%;
-	@media only screen and (max-width: 1350px) and (orientation: portrait),
-	screen and (max-width: 1080px) {
-		height: auto;
+    @include  media-md {
+		height: 100%;
 	}
 }
 body {
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 1.2;
 	min-width: 320px;
 	position: relative;
@@ -36,6 +35,9 @@ body {
 	font-weight: 400;
 	overflow-x: hidden;
 	color: #1d1d1f;
+    @include  media-md {
+		font-size: 16px;
+	}
 	input, textarea {
 		width: 100%;
 		border: 1px solid transparent;
@@ -80,17 +82,6 @@ body {
 	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
-	background: #000 url('../img/main-bg.jpg') no-repeat;
-	background-position: center;
-	background-size: cover;
-	@media only screen and (max-width: 1350px) and (orientation: portrait),
-	screen and (max-width: 1080px) {
-		background-image: url('../img/main-bg-750.jpg');
-		background-position-y: 0px;
-	}
-	@media only screen and (max-width: 767px){
-		background-image: url('../img/main-bg-320.jpg');
-	}
 }
 .img-responsive {
 	display: block;
@@ -110,21 +101,12 @@ b, strong {
 }
 .wrap {
 	width: 100%;
-	max-width: 1350px;
-	padding: 0 90px;
+	max-width: 100%;
+	padding: 0 14px;
 	margin: 0 auto;
-	@media only screen and (max-width: 1350px) and (orientation: portrait),
-	screen and (max-width: 1080px) {
-		max-width: 750px;
-		padding: 0 15px;
-	}
-	@media only screen and (max-width: 767px){
-		padding: 0 14px;
-		// max-width: 320px;
-
-	}
-	@media only screen and (max-height: 850px) and  (min-width: 1081px) {
-		max-width: 1200px;
+    @include  media-md {
+		max-width: 1350px;
+		padding: 0 90px;
 	}
 }
 a {
@@ -147,7 +129,7 @@ a {
 		-ms-transition: all.1s ease; 
 		-o-transition: all.1s ease; 
 		transition: all.1s ease;
-	};
+	}
 }
 ul,li {
 	list-style: none;
@@ -161,66 +143,43 @@ ul,li {
 	letter-spacing: 4px;
 }
 .title, h2 {
-	font-size: 30px;
+	font-size: 24px;
 	font-weight: 700;
 	text-align: center;
 	margin-top: 0;
 	margin-bottom: 0;
-    @media only screen and (max-width: 767px){
-		font-size: 24px;
-	}
-}
-.subtitle {
-	font-size: 18px;
-	text-align: center;
-	@media only screen and (max-width: 880px) {
-
-	}
-	@media only screen and (max-width: 579px) {
-
-	}
-	&+.subtitle {
-		margin-top: 10px;
+    @include  media-md {
+		font-size: 30px;
 	}
 }
 .btn {
+	font-size: 14px;
+	max-width: 315px;
+	padding: 13px 7px;
+	width: 100%;
+	max-width: 380px;
+	margin-left: auto;
+	margin-right: auto; 
 	position: relative;
 	display: block;
-	font-weight: 700;
-	font-size: 20px;
+	font-weight: 600;
 	color: #fff;
-    padding: 18px 12px;
 	transition: 0.5s;
 	cursor: pointer;
 	background: $accent;
 	border: none;
-    min-width: 315px;
 	text-align: center;
 	transition: 0.3s;
-	box-shadow: 0.105px 2.998px 7.5px rgba(0,0,0,0.51);
-	@media only screen and (max-width: 1279px){
-		min-width: auto;
+	box-shadow: 0.105px 2.998px 7.5px rgba(0,0,0,0.5);
+    @include  media-md {
+		margin-left: 0;
+		margin-right: 0;
+		width: auto;
+    	padding: 18px 12px;
 		font-size: 18px;
-	}
-	
-	@media only screen and (max-width: 767px){
-		padding: 18px 7px;
-		width: 100%;
-		max-width: 380px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	@media only screen and (max-width: 419px){
-		max-width: 315px;
+    	min-width: 315px;
 	}
 
-	@media only screen and (max-height: 850px) and  (min-width: 1081px) {
-		// font-size: 16px;
-		// // min-width: 258px;
-		// min-width: 320px;
-		// padding-top: 20px;
-		// padding-bottom: 20px;
-	}
 	&:hover, &:active {
 		background: #8D8B55;
 	}

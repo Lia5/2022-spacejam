@@ -29,11 +29,6 @@
 .cross {
     display: none;
 }
-.menu-wrap {
-}
-.main-menu {
-
-}
 .menu-toggle {
     display: block;
     width: 29px;
@@ -86,7 +81,7 @@
 }
 .main-menu {
     display: none;
-    font-size: 30px;
+    font-size: 16px;
     line-height: 1;
     @include  media-md {
         font-size: 13px;
@@ -96,7 +91,7 @@
         font-size: 15px;
     }
     @include  media-xl {
-        font-size: 18px;
+        font-size: 16px;
         height: 100%;
     }
     &.active {
@@ -104,13 +99,14 @@
         position: fixed;
         overflow: auto;
         width: 100%;
-        height: calc(100% - 75px);
+        height: calc(100% - 63px);
         background-color: rgba(255, 255, 255, 0.95);
         z-index: 3;
         left: 0;
-        top: 74px;
+        top: 63px;
         @include  media-md {
             width: 87%;
+            height: auto;
         }
         ul {
             display: block;
@@ -126,10 +122,13 @@
     }
     a  {
         display: flex;
-        padding: 24px 6px;
+        padding: 20px 0;
         position: relative;
+        @include  media-md {
+            padding: 14px 7px;
+        }
         @include  media-xl {
-            padding: 7px;
+            padding: 14px;
         }
         &:after {
             content: "";

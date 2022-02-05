@@ -32,6 +32,10 @@
     }
 }
 .header {
+    height: 63px;
+    @include  media-md {
+        height: auto;
+    }
     &__group {
         display: flex;
         align-items: center;
@@ -39,7 +43,7 @@
             margin-left: auto;
         }
     }
-    &__phone {
+    &__lk {
         font-weight: 700;
         @media only screen and (max-width: 991px){
             margin-left: 10px;
@@ -48,6 +52,13 @@
         a:hover {
             color: $accent;
         }
+        .btn {
+            background: transparent;
+            box-shadow: none;
+            &:hover {
+            	box-shadow: 0.105px 2.998px 7.5px rgba(0,0,0,0.5);
+            }
+        }
         span {
             @media only screen and (max-width: 991px){
                 display: none;
@@ -55,13 +66,14 @@
         }
     }
     &__lang {
+        display: none;
         position: relative;
-        margin-left: 20px;
-        @media only screen and (max-width: 991px){
+        @include  media-md {
+            display: block;
             margin-left: 0;
         }
-        @media only screen and (max-width: 767px){
-            display: none;
+        @include  media-lg {
+            margin-left: 20px;
         }
         .current {
             &:hover {
@@ -98,10 +110,10 @@
         }
     }
 }
-.icon-phone {
+.icon-lk {
     display: none;
-    width: 20px;
-    height: 20px;
+    width: 29px;
+    height: 29px;
     fill: $accent;
     @media only screen and (max-width: 991px){
         display: block;
@@ -111,7 +123,6 @@
     cursor: pointer;
     position: relative;
     padding: 10px;
-    color: $accent;
     &:after {
         content: "";
         position: absolute;
@@ -158,12 +169,12 @@
     }
     &__list {
         display: none;
-        background: #5959a5;
+        background: #fff;
         position: absolute;
         top: 35px;
         left: 0;
+        box-shadow: 0.105px 1px 4.5px rgba(0, 0, 0, 0.29);
         &.active {
-            
             display: block;
         }
     }
