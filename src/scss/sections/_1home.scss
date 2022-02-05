@@ -23,6 +23,7 @@
         margin: 0 auto;
         transition: 0.8s;
         @include  media-md {
+            max-width: none;
             opacity: 1;
             transform: translateY(0) translateX(0) scale(1);
         }
@@ -158,6 +159,8 @@
 }
 svg.svg-animation {
     overflow: visible;
+    min-width: 215px;
+    width: 100%;
 }
 .animated {
     opacity: 0;
