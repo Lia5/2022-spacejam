@@ -39,15 +39,9 @@
     &__group {
         display: flex;
         align-items: center;
-        @media only screen and (max-width: 767px){
-            margin-left: auto;
-        }
     }
     &__lk {
         font-weight: 700;
-        @media only screen and (max-width: 991px){
-            margin-left: 10px;
-        }
 
         a:hover {
             color: $accent;
