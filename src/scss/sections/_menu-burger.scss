@@ -33,10 +33,6 @@
     display: block;
     width: 29px;
     height: 28px;
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    left: 20px;
     cursor: pointer;
     z-index: 4;
     .one, .two, .three {
@@ -161,10 +157,6 @@
     }
 }
 .menu-wrap {
-    position: absolute;
-    left: 0;
-    padding-left: 25px;
-    padding-right: 25px;
     @include  media-md {
         position: static;
         margin-left: auto;

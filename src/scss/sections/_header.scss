@@ -99,7 +99,7 @@
     }
     img {
         width: 120px;
-        transform: translateY(0) translateX(0) scale(0);
+        transform: translateY(0) translateX(0) scale(1);
         transition: 0.8s;
         @include  media-md {
             opacity: 0;
