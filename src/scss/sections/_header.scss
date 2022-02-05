@@ -12,29 +12,20 @@
     flex-direction: column;
     z-index: 3;
     background: #fbfbfd;
-    @media only screen and (max-width: 749px) {
-        z-index: 103;
-    }
-    a {
-        @media only screen and (max-width: 767px){
-            // color: #0m   90f21;
-        }
-    }
-    @media only screen and (max-height: 850px) and  (min-width: 1081px) {
-
+    height: 63px;
+    z-index: 103;
+    transition: 0.5s;
+    top: 0;
+    @include  media-md {
+        height: auto;
     }
     .container {
         display: flex;
         align-items: center;
-        @media only screen and (max-width: 767px){
-            position: relative;
-        }
+        position: relative;
     }
-}
-.header {
-    height: 63px;
-    @include  media-md {
-        height: auto;
+    &.hide {
+        top: -90px;
     }
     &__group {
         display: flex;

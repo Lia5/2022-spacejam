@@ -3,11 +3,10 @@
     position: relative; 
     background: url('/img/bg2.png') no-repeat;
     background: linear-gradient(to bottom, #fbfbfd 50%, rgba(104, 164, 48, 0.7) 90%);
-    padding-top: 100px;
-    padding-bottom: 20px;
-    margin-bottom: 14px;
+    padding: 100px 40px;
     z-index: 1;
     @include  media-md {
+        padding-bottom: 70px;
         background: linear-gradient(70deg, #fbfbfd 50%, rgba(104, 164, 48, 0.7) 90%);
     }
     &__body {
@@ -133,6 +132,7 @@
         margin: 10px 0;
         @include  media-md {
             padding: 20px 10px;
+            margin: 0;
         }
         &:hover {
             box-shadow: 0.105px 2.998px 7.5px rgba(0,0,0,0.51);

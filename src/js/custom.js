@@ -468,24 +468,32 @@ $(window).resize(function() {
     AnchorActive();
 });
 
+var scrollPos = 0;
 $(window).scroll(function(){
     
+   var st = $(this).scrollTop();
+   if (st > scrollPos){
+     $('.header').addClass('hide');
+   } else {
+     $('.header').removeClass('hide');
+   }
+   scrollPos = st;
     AnchorActive();
     
-        $('.callback').toggleClass('active', $(this).scrollTop() > $('#about').offset().top-300);
+        $('.callback').toggleClass('active', st > $('#about').offset().top-300);
     if ( window.innerWidth > 767 || window.screen.width > 767) {
 
-        $('.sticky.on').toggleClass('active', $(this).scrollTop() > $('#about').offset().top-300);
+        $('.sticky.on').toggleClass('active', st > $('#about').offset().top-300);
 
     }
-        $('.logo img').toggleClass('active', $(this).scrollTop() > 0);
-        $('.home__logo').toggleClass('active', $(this).scrollTop() > 0);
-        $('.home__title').toggleClass('active', $(this).scrollTop() > 0);
+        $('.logo img').toggleClass('active', st > 0);
+        $('.home__logo').toggleClass('active', st > 0);
+        $('.home__title').toggleClass('active', st > 0);
         var svgImg = $("svg .animated");
         svgImg.each(function(i,t) {
             var $this = $(t);
             setTimeout(function(){ 
-                if($(this).scrollTop() > 0) {
+                if(st > 0) {
                     $this.addClass('fadeInDown'); 
                     $this.removeClass('fadeOutUp'); 
                 } else {
