@@ -1,8 +1,5 @@
 @import "vars";
 
-.menu-toggle {
-    display: none;
-}
 .menu__text--mob {
     position: relative;
     display: block;
@@ -104,13 +101,12 @@
             width: 87%;
             height: auto;
         }
-        ul {
+        &>ul {
             display: block;
             padding: 20px;
-            color: #090f21;
         } 
     }
-    ul {
+    &>ul {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -153,6 +149,22 @@
         border-top: 1px solid $accent;
         @include  media-md {
             border-top: none;
+        }
+    }
+    .submenu {
+        padding: 0 0 0 20px;
+        @include  media-md {
+            border-radius: 0 0 10px 10px;
+            padding-left: 3px;
+            padding-right: 10px;
+            position:absolute;
+            background: #fff;
+            box-shadow: 0.105px 1px 4.5px rgba(0, 0, 0, 0.29);
+        }
+        &.active {
+            ul {
+                display: block;
+            }
         }
     }
 }

@@ -28,6 +28,25 @@ $(function() {
             }
         });
     }
+    //submenu
+    if(jQuery('.parent-menu').length) {
+        $(".submenu").hide();
+        $(".parent-menu").click(function () {
+        
+          /*$(this).addClass("active");*/    
+          // можно и иначе выбрать все другие блоки
+          // вот так $(".pointer").not(this)
+          
+          $(this).closest('ul')
+            .find(".parent-menu").not(this)
+            .slideUp(800, 'linear')
+            .removeClass("active");
+          $(this)
+            .next()
+            .slideToggle(800, 'linear')
+            .toggleClass("active");
+        });
+    }
 
     if ( $('.copy-year').length) {
         var year = new Date().getFullYear()
@@ -68,7 +87,7 @@ $(function() {
             && div.has(e.target).length === 0) { // и не по его дочерним элементам
                 div.removeClass('active');
                 $('.lang__list').removeClass('active');
-              
+                $(".submenu").slideUp(800, 'linear').removeClass("active");
             }
         });
     }
@@ -315,121 +334,6 @@ $(function() {
         });
 		return false;
     });
-
-    //map
-    // function initMap() {
-    //     var centerLatLng = new google.maps.LatLng(50.423416, 30.492812);
-    //     var mapOptions = {
-    //         center: centerLatLng,
-    //         zoom: 15,               // Зум по умолчанию. Возможные значения от 0 до 21
-    //         navigationControlOptions: {
-    //           style: google.maps.NavigationControlStyle.SMALL
-    //         },
-    //          mapTypeId: google.maps.MapTypeId.ROADMAP
-    //     };
-    //     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-    //     map.scrollwheel=true;
-    //   map.setOptions({ mapTypeControl:true});
-    //   var locations = [
-    //     {
-    //         title: 'Велохата',
-    //         position: {lat: 50.424069, lng: 30.498852},
-    //         icon: {
-    //             url: "img/marker.png",
-    //             scaledSize: new google.maps.Size(45, 60)
-    //         }
-    //     }
-    // ];
-    // locations.forEach( function( element ) {
-    //     var marker = new google.maps.Marker({
-    //             position: element.position,
-    //             map: map,
-    //             title: element.title,
-    //             icon: element.icon,
-    //         });
-    //     });	
-    // }
-    // google.maps.event.addDomListener(window, "load", initMap);
-
-
-//     var treeIcon = L.icon({
-//         iconUrl: 'img/marker.png',
-//         iconSize: [45, 60],
-//         iconAnchor: [16, 37],
-//         popupAnchor: [0, -37]
-//       });
-      
-//       var treeLayer = L.marker([50.424069, 30.498852], {icon: treeIcon});
-      
-//     //   var trainLayer = L.marker([50.424069, 30.498852], {icon: treeIcon});
-    
-//     if ( window.innerWidth < 767 || window.screen.width < 767) {
-//         var map = L.map('map', {
-//             center: [50.424069, 30.498852],
-//             zoom: 17,
-//             layers: [treeLayer],
-//             dragging: !L.Browser.mobile,
-//             tap: !L.Browser.mobile
-//             //   layers: [trainLayer, treeLayer]
-//         });
-//     } else {
-//         var map = L.map('map', {
-//             center: [50.424123, 30.497532],
-//             zoom: 17,
-//             layers: [treeLayer],
-//             dragging: !L.Browser.mobile,
-//             tap: !L.Browser.mobile
-//             //   layers: [trainLayer, treeLayer]
-//         });
-//     }
-//       var myIcon = L.divIcon({
-//           className: 'my-div-icon',
-//         // iconSize: [145, 160]
-//         });
-      
-//       L.marker([50.424069, 30.498852], {icon: myIcon}).addTo(map);
-
-//     //   var overlayMaps = {
-//     //     "<img src='http://mollietaylor.com/skills/js/leaflet/train.png' height=24>Train": trainLayer,
-//     //     "<img src='http://mollietaylor.com/skills/js/leaflet/arbol.png' height=24>Tree": treeLayer
-//     //   };
-      
-//     //   L.control.layers(null, overlayMaps, {
-//     //     collapsed: false
-//     //   }).addTo(map);
-      
-//       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-//         attribution: '&copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
-//       }).addTo(map);
-      
-//       //disable default scroll 
-//   map.scrollWheelZoom.disable();
-
-//   if ( window.innerWidth > 767 || window.screen.width > 767) {
-//     $("#map").bind('mousewheel DOMMouseScroll', function (event) {
-//         event.stopPropagation();
-//         if (event.ctrlKey == true) {
-//             event.preventDefault();
-//             map.scrollWheelZoom.enable();
-//             $('#map').removeClass('map-scroll');
-//             setTimeout(function(){
-//                 map.scrollWheelZoom.disable();
-//             }, 1000);
-//         } else {
-//             map.scrollWheelZoom.disable();
-//             $('#map').addClass('map-scroll');
-//         }
-
-//     });
-//   }
-
-//   $(window).bind('mousewheel DOMMouseScroll', function (event) {
-//        $('#map').removeClass('map-scroll');
-//   })
-
-//   $('.leaflet-marker-pane').wrapInner('<a href="https://www.google.com.ua/maps/dir//%D1%83%D0%BB.+%D0%9F%D1%80%D0%BE%D1%82%D0%B0%D1%81%D0%BE%D0%B2+%D0%AF%D1%80,+27,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4239561,30.4966315,17z/data=!4m17!1m7!3m6!1s0x40d4cede66a23b17:0xa54392dda35257ca!2z0YPQuy4g0J_RgNC-0YLQsNGB0L7QsiDQr9GALCAyNywg0JrQuNC10LIsIDAyMDAw!3b1!8m2!3d50.4239527!4d30.4988202!4m8!1m0!1m5!1m1!1s0x40d4cede66a23b17:0xa54392dda35257ca!2m2!1d30.4988202!2d50.4239527!3e2?hl=ru" target="_blank"></a>')
-
- 
     AnchorActive();
     if ( window.innerWidth < 767 || window.screen.width < 767) {
         $('.contact__body').addClass('fadeInUp');
@@ -474,6 +378,7 @@ $(window).scroll(function(){
    var st = $(this).scrollTop();
    if (st > scrollPos){
      $('.header').addClass('hide');
+     $(".submenu").slideUp(100, 'linear').removeClass("active");
    } else {
      $('.header').removeClass('hide');
    }

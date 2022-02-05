@@ -160,6 +160,7 @@
         position: absolute;
         top: 35px;
         left: 0;
+        border-radius: 0 0 10px 10px;
         box-shadow: 0.105px 1px 4.5px rgba(0, 0, 0, 0.29);
         &.active {
             display: block;

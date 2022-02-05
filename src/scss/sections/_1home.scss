@@ -11,10 +11,10 @@
     }
     &__body {
         position: relative;
-        padding-top: 17px;
+        padding-top: 20px;
         margin-bottom: 50px;
         @include  media-lg {
-            margin-bottom: 128px;
+            margin-bottom: 70px;
         }
     }
     &__logo {
@@ -122,33 +122,6 @@
             @include  media-lg {
                 max-width: 350px;
             }
-        }
-    }
-    &__item {
-        display: block;
-        padding: 26px;
-        background: #fff;
-        box-shadow: 0.105px 1px 4.5px rgba(0, 0, 0, 0.29);
-        margin: 10px 0;
-        @include  media-md {
-            padding: 20px 10px;
-            margin: 0;
-        }
-        &:hover {
-            box-shadow: 0.105px 2.998px 7.5px rgba(0,0,0,0.51);
-            .home__name {
-                color: $accent;
-            }
-        }
-    }
-    &__name {
-        font-size: 18px;
-        text-align: center;
-        @include  media-md {
-            font-size: 17px;
-        }
-        @include  media-lg {
-            font-size: 25px;
         }
     }
 }

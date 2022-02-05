@@ -171,6 +171,7 @@ ul,li {
 	border: none;
 	text-align: center;
 	transition: 0.3s;
+	border-radius: 10px;
 	box-shadow: 0.105px 1px 4.5px rgba(0, 0, 0, 0.29);
     @include  media-md {
 		margin-left: 0;

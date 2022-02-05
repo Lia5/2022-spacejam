@@ -10,7 +10,14 @@ header.header
 			nav.main-menu 
 				ul
 					li
-						a(href="#about" data-menuanchor="#about").scroll-to SpaceJam
+						a(href="#").parent-menu SpaceJam
+						ul.submenu
+							li.submenu__item
+								a(href="#about" data-menuanchor="#about") О нас
+							li.submenu__item
+								a(href="#vacancies" data-menuanchor="#about") Вакансии
+							li.submenu__item
+								a(href="#smi" data-menuanchor="#about") Материалы для СМИ
 					li
 						a(href="#opportunities" data-menuanchor="#opportunities").scroll-to Возможности
 					li
