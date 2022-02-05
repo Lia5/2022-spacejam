@@ -46,9 +46,9 @@
     z-index: 4;
     .one, .two, .three {
         width: 100%;
-        height: 6px;
+        height: 4px;
         background: $accent;
-        margin: 6px auto;
+        margin: 8px auto;
         backface-visibility: hidden;
         transition-duration: .3s;
     }
@@ -69,14 +69,14 @@
             margin: 8px auto;
         }
         .one {
-            transform: rotate(57deg) translate(0, 9px);
+            transform: rotate(57deg) translate(0, 10px);
             width: 150%;
         }
         .two {
             opacity: 0;
         }
         .three {
-            transform: rotate(-57deg) translate(19px, -21px);
+            transform: rotate(-57deg) translate(14px, -19px);
             width: 150%;
         }
     }
