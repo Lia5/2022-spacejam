@@ -32,18 +32,10 @@ body {
 	line-height: 1.2;
 	min-width: 320px;
 	position: relative;
-	font-family: "PTSansCaption", Arial, Helvetica, sans-serif;
+	font-family: "Inter", Arial, Helvetica, sans-serif;
 	font-weight: 400;
 	overflow-x: hidden;
-	color: #262627;
-	@media only screen and (max-width: 1350px) and (orientation: portrait),
-	screen and (max-width: 1080px) {
-
-
-	}
-	@media only screen and (max-width: 767px){
-		
-	}
+	color: #1d1d1f;
 	input, textarea {
 		width: 100%;
 		border: 1px solid transparent;
@@ -55,9 +47,6 @@ body {
 		}
 		&:required:valid {
 			border-color: green;
-		}
-		@media only screen and (max-width: 767px) {
-
 		}
 	}
 	textarea {
@@ -78,15 +67,11 @@ body {
 .body-modal-open {
 	// max-height: 100vh;
 	overflow: hidden;
-	padding-right: 19px;
-    @media only screen and (max-width: 749px) {
-		padding-right: 0;
+	.site {
+		overflow-y: scroll;
 	}
 	.sticky, header {
-		padding-right: 19px;
-		@media only screen and (max-width: 749px) {
-			padding-right: 0;
-		}
+		overflow-y: scroll;
 	}
 }
 .main {
@@ -203,11 +188,11 @@ ul,li {
 	display: block;
 	font-weight: 700;
 	font-size: 20px;
-	color: #000;
+	color: #fff;
     padding: 18px 12px;
 	transition: 0.5s;
 	cursor: pointer;
-	background: #ffcc33;
+	background: $accent;
 	border: none;
     min-width: 315px;
 	text-align: center;
@@ -237,7 +222,7 @@ ul,li {
 		// padding-bottom: 20px;
 	}
 	&:hover, &:active {
-		background: #eeeeee;
+		background: #8D8B55;
 	}
 	&--white {
 		background: #fff;
