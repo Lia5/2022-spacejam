@@ -19,7 +19,7 @@
         }
     }
     &__logo {
-        max-width: 200px;
+        max-width: 260px;
         margin: 0 auto;
         transition: 0.8s;
         @include  media-md {
@@ -44,6 +44,8 @@
         text-align: center;
         font-weight: 700;
         margin-top: 0;
+        margin-bottom: -100px;
+        transition: margin 1s;
         @include  media-md {
             font-size: 40px;
             text-align: left;
@@ -53,6 +55,10 @@
             font-size: 60px;
             margin-top: 0;
             margin-bottom: 44px;
+        }
+        &.active {
+            margin-bottom: 20px;
+            margin-top: -80px;
         }
         .text-accent{
             display: block;
@@ -161,6 +167,10 @@ svg.svg-animation {
     overflow: visible;
     min-width: 215px;
     width: 100%;
+    max-width: 260px;
+    @include  media-md {
+        max-width: none;
+    }
 }
 .animated {
     opacity: 0;

@@ -480,6 +480,7 @@ $(window).scroll(function(){
     }
         $('.logo img').toggleClass('active', $(this).scrollTop() > 0);
         $('.home__logo').toggleClass('active', $(this).scrollTop() > 0);
+        $('.home__title').toggleClass('active', $(this).scrollTop() > 0);
         var svgImg = $("svg .animated");
         svgImg.each(function(i,t) {
             var $this = $(t);
