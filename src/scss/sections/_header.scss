@@ -55,6 +55,14 @@
         .btn {
             background: transparent;
             box-shadow: none;
+            min-width: auto;
+            @include  media-lg {
+                font-size: 16px;
+                padding: 10px 12px;
+                min-width: 225px;
+                background: $accent;
+            	box-shadow: 0.105px 2.998px 7.5px rgba(0,0,0,0.5);
+            }
             &:hover {
             	box-shadow: 0.105px 2.998px 7.5px rgba(0,0,0,0.5);
             }
