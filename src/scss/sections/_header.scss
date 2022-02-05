@@ -1,0 +1,202 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #262627;
+    z-index: 3;
+    @media only screen and (max-width: 749px) {
+        z-index: 103;
+    }
+    a {
+        color: #fff;
+        @media only screen and (max-width: 767px){
+            // color: #0m   90f21;
+        }
+    }
+    @media only screen and (max-height: 850px) and  (min-width: 1081px) {
+
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        @media only screen and (max-width: 767px){
+            position: relative;
+        }
+    }
+}
+.header {
+    &__group {
+        display: flex;
+        align-items: center;
+        @media only screen and (max-width: 767px){
+            margin-left: auto;
+        }
+    }
+    &__phone {
+        font-weight: 700;
+        @media only screen and (max-width: 991px){
+            margin-left: 10px;
+        }
+
+        a:hover {
+            color: $accent;
+        }
+        span {
+            @media only screen and (max-width: 991px){
+                display: none;
+            }
+        }
+    }
+    &__lang {
+        position: relative;
+        color: #fff;
+        margin-left: 20px;
+        @media only screen and (max-width: 991px){
+            margin-left: 0;
+        }
+        @media only screen and (max-width: 767px){
+            display: none;
+        }
+        .current {
+            &:hover {
+                color: $accent;
+            }
+        }
+    }
+}
+.logo {
+    @media only screen and (max-width: 1350px) and (orientation: portrait),
+    screen and (max-width: 1080px) {
+
+    }
+    @media only screen and (max-width: 767px){
+        margin-left: auto;
+    }
+    img {
+        opacity: 0;
+        width: 85px;
+        transform: translateY(100px) translateX(100px) scale(2);
+        transition: 0.3s;
+        &.active {
+            opacity: 1;
+            transform: translateY(0) translateX(0) scale(1.5);
+            @media only screen and (max-width: 749px) {
+                transform: translateY(0) translateX(0) scale(1.1);
+            }
+        }
+        @media only screen and (max-width: 991px){
+            width: 70px;
+        }
+        @media only screen and (max-width: 767px){
+            transform: translateY(0) translateX(0) scale(1);
+            opacity: 1;
+            width: 135px;
+            margin: -25px -28px -16px 0;
+        }
+    	@media only screen and (max-height: 850px) and  (min-width: 1081px) {
+            // width: 192px;
+        }
+    }
+}
+.icon-phone {
+    display: none;
+    width: 20px;
+    height: 20px;
+    fill: $accent;
+    @media only screen and (max-width: 991px){
+        display: block;
+    }
+}
+.lang {
+    cursor: pointer;
+    position: relative;
+    padding: 10px;
+    color: $accent;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 16px;
+        right: -5px;
+        width: 0;
+        height: 0;
+        border: 5px solid #fff;
+        border-bottom: none;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        // transition: 0.3s;
+    }
+    &:hover:after {
+        border-top-color: $accent;
+    }
+    &.active {
+        &:after {
+            border-top: none;
+            border-bottom: 5px solid #fff;
+            
+        }
+        &:hover:after {
+            border-bottom-color: $accent;
+        }
+    }
+    &--mob {
+        display: none;
+        @media only screen and (max-width: 767px){
+            display: flex;
+        }
+        span {
+            color: $accent;
+            padding: 24px 10px;
+        }
+        .current {
+            color: $accent;
+        }
+        .lang__item {
+            @media only screen and (max-width: 767px){
+                padding: 24px 10px;
+            }
+        }
+    }
+    &__list {
+        display: none;
+        background: #262627;
+        position: absolute;
+        top: 35px;
+        left: 0;
+        &.active {
+            
+            display: block;
+        }
+    }
+    &__item {
+        display: block;
+        padding: 10px;
+        &+.lang__item {
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 50%;
+                margin-right: -50%;
+                transform: translate(-50%, 0);
+                width: 80%;
+                height: 1px;
+                background: $accent;
+            }
+        }
+        &:hover {
+            color: $accent;
+        }
+    }
+}
+
+
+
