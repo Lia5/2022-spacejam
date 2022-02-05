@@ -2,13 +2,13 @@
     overflow: hidden;
     position: relative; 
     background: url('/img/bg2.png') no-repeat;
-    background: linear-gradient(to bottom, #fbfbfd 20%, #69A430 80%);
+    background: linear-gradient(to bottom, #fbfbfd 50%, rgba(104, 164, 48, 0.7) 90%);
     padding-top: 100px;
     padding-bottom: 20px;
     margin-bottom: 14px;
     z-index: 1;
     @include  media-md {
-        background: linear-gradient(70deg, #fbfbfd 20%, #69A430 80%);
+        background: linear-gradient(70deg, #fbfbfd 50%, rgba(104, 164, 48, 0.7) 90%);
     }
     &__body {
         position: relative;
@@ -23,7 +23,8 @@
         margin: 0 auto;
         transition: 0.8s;
         @include  media-md {
-            max-width: none;
+            margin: 0;
+            max-width: 350px;
             opacity: 1;
             transform: translateY(0) translateX(0) scale(1);
         }
@@ -53,8 +54,6 @@
         @include  media-lg {
             font-weight: normal;
             font-size: 60px;
-            margin-top: 0;
-            margin-bottom: 44px;
         }
         &.active {
             margin-bottom: 20px;
@@ -130,10 +129,7 @@
                 max-width: 300px;
             }
             @include  media-lg {
-                max-width: 400px;
-            }
-            @include  media-xl {
-                max-width: 500px;
+                max-width: 350px;
             }
         }
     }
@@ -169,7 +165,7 @@ svg.svg-animation {
     width: 100%;
     max-width: 260px;
     @include  media-md {
-        max-width: none;
+        max-width: 350px;
     }
 }
 .animated {
