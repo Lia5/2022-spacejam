@@ -2,133 +2,141 @@
     overflow: hidden;
     position: relative; 
     background: url('/img/bg2.png') no-repeat;
-    background: linear-gradient(70deg, #fbfbfd 20%, #69A430 80%);
+    background: linear-gradient(to bottom, #fbfbfd 20%, #69A430 80%);
     padding-top: 100px;
     padding-bottom: 20px;
     margin-bottom: 14px;
     z-index: 1;
+    @include  media-md {
+        background: linear-gradient(70deg, #fbfbfd 20%, #69A430 80%);
+    }
     &__body {
         position: relative;
         padding-top: 17px;
-        margin-bottom: 128px;
-        @media only screen and (max-width: 991px){
-            margin-bottom: 50px;
+        margin-bottom: 50px;
+        @include  media-lg {
+            margin-bottom: 128px;
         }
     }
     &__logo {
-        opacity: 1;
-        transform: translateY(0) translateX(0) scale(1);
-        transition: 0.3s;
-        @media only screen and (max-width: 767px){
-            display: none;
+        max-width: 200px;
+        margin: 0 auto;
+        transition: 0.8s;
+        @include  media-md {
+            opacity: 1;
+            transform: translateY(0) translateX(0) scale(1);
         }
         &.active {
             opacity: 0;
-            transform: translateY(-100px) translateX(-100px) scale(0);
+            transform: translateY(-100px) translateX(0) scale(0);
+            @include  media-md {
+                transform: translateY(-100px) translateX(-100px) scale(0);
+            }
         }
         img {
             position: relative;
             width: 100%;
-            
         }
     }
     &__title {
-        font-weight: normal;
         font-size: 60px;
+        text-align: center;
+        font-weight: 700;
         margin-top: 0;
-        margin-bottom: 44px;
-        @media only screen and (max-width: 991px){
+        @include  media-md {
             font-size: 40px;
+            text-align: left;
         }
-        @media only screen and (max-width: 767px){
-            padding-top: 47%;
+        @include  media-lg {
+            font-weight: normal;
             font-size: 60px;
-            text-align: center;
-            font-weight: 700;
-        }
-        @media only screen and (max-width: 500px){
-            padding-top: 35%;
+            margin-top: 0;
+            margin-bottom: 44px;
         }
         .text-accent{
-            @media only screen and (max-width: 767px){
-                display: block;
-                font-weight: 400;
-                font-size: 48px;
+            display: block;
+            font-weight: 400;
+            font-size: 48px;
+            @include  media-md {
+                display: inline;
             }
         }
     }
     &__subtitle {
-        font-size: 18px;
-        font-weight: 700;
-        margin-bottom: 17px;
-        @media only screen and (max-width: 767px){
-            max-width: 315px;
-            margin-left: auto;
-            margin-right: auto;
+        max-width: 315px;
+        margin-left: auto;
+        margin-right: auto;
+        @include  media-md {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 17px;
+            margin-left: 0;
+            margin-right: 0;
         }
     }
     &__text {
-        font-size: 18px;
-        line-height: 1.5;
-        max-width: 389px;
-        margin-bottom: 51px;
-        @media only screen and (max-width: 991px){
+        max-width: 315px;
+        margin-bottom: 66px;
+        margin-left: auto;
+        margin-right: auto;
+        @include  media-md {
             font-size: 14px;
             margin-bottom: 35px;
+            margin-left: 0;
+            margin-right: 0;
         }
-        @media only screen and (max-width: 767px){
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 315px;
-            margin-bottom: 66px;
+        @include  media-lg {
+            font-size: 18px;
+            line-height: 1.5;
+            max-width: 389px;
+            margin-bottom: 51px;
         }
     }
     &__btn {
-        max-width: 315px;
-        @media only screen and (max-width: 767px){
+        max-width: 100%;
+        @include  media-sm {
+            max-width: 315px;
             margin-left: auto;
             margin-right: auto;
-            max-width: 380px;
         }
-        @media only screen and (max-width: 419px){
-            max-width: 100%;
+        @include  media-md {
+            max-width: 380px;
+            margin-left: 0;
+            margin-right: 0;
         }
         .btn {
-            @media only screen and (max-width: 419px) {
-                max-width: 100%;
-            }
+            max-width: 100%;
         }
     }
     &__img {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
+        margin-bottom: 60px;
+        @include  media-md {
+            justify-content: flex-end;
+            margin-bottom: 0;
+        }
         img {
             width: 100%;
-            max-width: 500px;
+            max-width: 200px;
+            @include  media-md {
+                max-width: 300px;
+            }
+            @include  media-lg {
+                max-width: 400px;
+            }
+            @include  media-xl {
+                max-width: 500px;
+            }
         }
     }
     &__item {
         display: block;
         padding: 26px;
         background: #fff;
-        background-repeat: no-repeat;
-        background-position: bottom center;
-        background-size: contain;
-        @media only screen and (max-width: 1279px){
-            height: 255px;
-        }
-        @media only screen and (max-width: 991px){
-            height: 198px;
-            padding: 26px 12px;
-        }
-        @media only screen and (max-width: 767px){
-            height: 293px;
-            margin: 0 auto 18px;
-            max-width: 380px;
-        }
-        @media only screen and (max-width: 419px){
-            // max-width: 315px;
-            height: 222px;
+        margin: 10px 0;
+        @include  media-md {
+            padding: 20px 10px;
         }
         &:hover {
             box-shadow: 0.105px 2.998px 7.5px rgba(0,0,0,0.51);
@@ -138,14 +146,102 @@
         }
     }
     &__name {
-        font-size: 25px;
+        font-size: 18px;
         text-align: center;
-        @media only screen and (max-width: 1279px){
-            font-size: 20px;
+        @include  media-md {
+            font-size: 17px;
         }
-        @media only screen and (max-width: 991px){
-            font-size: 15px;
+        @include  media-lg {
+            font-size: 25px;
         }
     }
 }
+svg.svg-animation {
+    overflow: visible;
+}
+.animated {
+    opacity: 0;
+}
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+  }
+
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+  }
+
+@-webkit-keyframes fadeOutUp {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+  }
+  
+  @keyframes fadeOutUp {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+  }
+  
+  .fadeOutUp {
+    -webkit-animation-name: fadeOutUp;
+    animation-name: fadeOutUp;
+  }

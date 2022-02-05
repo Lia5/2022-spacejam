@@ -71,32 +71,28 @@
     }
 }
 .logo {
-    @media only screen and (max-width: 767px){
-        margin-left: auto;
+    margin-left: auto;
+    @include  media-md {
+        margin-left: 0;
     }
     img {
-        opacity: 0;
-        width: 125px;
-        transform: translateY(100px) translateX(100px) scale(2);
-        transition: 0.3s;
+        width: 120px;
+        transform: translateY(0) translateX(0) scale(0);
+        transition: 0.8s;
+        @include  media-md {
+            opacity: 0;
+            width: 125px;
+            transform: translateY(100px) translateX(100px) scale(2);
+        }
+        @include  media-lg {
+
+        }
         &.active {
-            opacity: 1;
             transform: translateY(0) translateX(0) scale(1);
-            @media only screen and (max-width: 749px) {
+            @include  media-md {
+                opacity: 1;
                 transform: translateY(0) translateX(0) scale(1);
             }
-        }
-        @media only screen and (max-width: 991px){
-            width: 70px;
-        }
-        @media only screen and (max-width: 767px){
-            transform: translateY(0) translateX(0) scale(1);
-            opacity: 1;
-            width: 135px;
-            margin: -25px -28px -16px 0;
-        }
-    	@media only screen and (max-height: 850px) and  (min-width: 1081px) {
-            // width: 192px;
         }
     }
 }

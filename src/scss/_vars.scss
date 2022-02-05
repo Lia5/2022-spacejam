@@ -7,32 +7,12 @@ $text: #1d1919;
 $primary: #A09E98;
 
 @mixin media-sm {
-    @media (min-width: #{420px}) { //420
-        @content;
-    }
-}
-@mixin media-500 {
-    @media (min-width: #{500px}) { 
-        @content;
-    }
-}
-@mixin media-550 {
-    @media (min-width: #{550px}) { 
-        @content;
-    }
-}
-@mixin media-600 {
-    @media (min-width: #{600px}) { 
+    @media (min-width: #{576px}) { //576
         @content;
     }
 }
 @mixin media-md {
     @media (min-width: #{768px}) {
-        @content;
-    }
-}
-@mixin media-800 {
-    @media (min-width: #{800px}) { 
         @content;
     }
 }
@@ -42,15 +22,15 @@ $primary: #A09E98;
     }
 }
 @mixin media-xl {
-    @media (min-width: #{1280px}) {
+    @media (min-width: #{1200px}) {
         @content;
     }
 }
-@mixin media-xxl {
-    @media (min-width: #{1400px}) {
-        @content;
-    }
-}
+// @mixin media-xxl {
+//     @media (min-width: #{1400px}) {
+//         @content;
+//     }
+// }
 :root {
     --bs-gutter-x: 8px;
     @include media-lg {
