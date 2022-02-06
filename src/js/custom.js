@@ -36,15 +36,19 @@ $(function() {
           /*$(this).addClass("active");*/    
           // можно и иначе выбрать все другие блоки
           // вот так $(".pointer").not(this)
-          
-          $(this).closest('ul')
-            .find(".parent-menu").not(this).next()
-            .slideUp(800, 'linear')
-            .removeClass("active");
-          $(this)
-            .next()
-            .slideToggle(800, 'linear')
-            .toggleClass("active");
+          if($(this).hasClass('active')){
+            $(this).next().slideUp(800, 'linear').removeClass("active");
+            $(this).removeClass('active');
+          } else {
+              $(this).next().slideDown(800, 'linear').addClass("active");
+              $(".parent-menu").removeClass('active');
+            $(this).addClass('active');
+          }
+        //   $(this).closest('ul')
+        //     .find(".parent-menu").not(this).next()
+        //     .slideUp(800, 'linear')
+        //     .removeClass("active");
+
         });
     }
 
