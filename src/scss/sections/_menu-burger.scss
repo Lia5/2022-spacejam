@@ -160,6 +160,17 @@
         @include  media-md {
             margin-top: 2px;
             margin-left: 5px;
+            content: "";
+            position: absolute;
+            top: 18px;
+            right: 0;
+            width: 0;
+            height: 0;
+            border: 5px solid #1d1919;
+            border-bottom: none;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            background-image: none;
         }
     }
     &.active:after {

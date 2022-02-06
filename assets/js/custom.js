@@ -97,9 +97,6 @@ $(function() {
     }
     //select-number form
     if(jQuery('.phone-mask').length) {
-        jQuery(function($){
-            $(".phone-mask").mask("+380(99) 999-9999").focus();
-        });
 
         $('.phone-mask').mask('+380(99) 999-9999').on('click', function () {
             console.log($(this).val());
@@ -350,15 +347,16 @@ function AnchorActive() {
     $('*[data-anchor]').each(function(e) {
         var dataName = $(this).attr('data-anchor');
         var posit = $(this).offset().top - 400;
-        if (dataName=="#contact") {
-            var posit = $(this).offset().top - 200;
-        }
+        // if (dataName=="#opportunities") {
+        //     var posit = $(this).offset().top - 200;
+        // }
 
         var windowPostition = $(window).scrollTop();
 
         if (windowPostition >= posit) {
             // console.log($('[data-menuAnchor="'+ dataName + '"]'));
             $('.main-menu a').removeClass('active');
+            $('[data-menuanchor]').removeClass('active');
             $('[data-menuanchor="'+ dataName + '"]').addClass('active');
             if (dataName=="#contact") {
                 $('.contact__body').addClass('fadeInUp');
