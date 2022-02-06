@@ -101,9 +101,12 @@
     display: none;
     width: 29px;
     height: 29px;
-    fill: $accent;
+    fill: #1d1919;
     @media only screen and (max-width: 991px){
         display: block;
+    }
+    &:hover {
+        fill: $accent;
     }
 }
 .lang {
