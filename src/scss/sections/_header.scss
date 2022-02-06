@@ -48,8 +48,12 @@
                 background: $accent;
             	box-shadow: 0.105px 2.998px 7.5px rgba(0,0,0,0.5);
             }
-            &:hover {
-            	box-shadow: 0.105px 2.998px 7.5px rgba(0,0,0,0.5);
+            &:hover, &:active {
+                @include  media-md {
+                    color: #fff;
+                    box-shadow: 0.105px 2.998px 7.5px rgba(0,0,0,0.5);
+                    background: #8D8B55;
+                }
             }
         }
         span {
