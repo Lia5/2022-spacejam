@@ -387,10 +387,10 @@ $(window).scroll(function(){
    scrollPos = st;
     AnchorActive();
     
-        $('.callback').toggleClass('active', st > $('#about').offset().top-300);
+        // $('.callback').toggleClass('active', st > $('#about').offset().top-300);
     if ( window.innerWidth > 767 || window.screen.width > 767) {
 
-        $('.sticky.on').toggleClass('active', st > $('#about').offset().top-300);
+        // $('.sticky.on').toggleClass('active', st > $('#about').offset().top-300);
 
     }
         $('.logo img').toggleClass('active', st > 0);
