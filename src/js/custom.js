@@ -38,7 +38,7 @@ $(function() {
           // вот так $(".pointer").not(this)
           
           $(this).closest('ul')
-            .find(".parent-menu").not(this)
+            .find(".parent-menu").not(this).next()
             .slideUp(800, 'linear')
             .removeClass("active");
           $(this)

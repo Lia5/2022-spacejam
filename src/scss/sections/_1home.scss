@@ -3,7 +3,7 @@
     position: relative; 
     background: url('/img/bg2.png') no-repeat;
     background: linear-gradient(to bottom, #fbfbfd 50%, rgba(104, 164, 48, 0.7) 90%);
-    padding: 100px 40px;
+    padding: 100px 40px 40px;
     z-index: 1;
     @include  media-md {
         padding-bottom: 70px;
@@ -127,9 +127,9 @@
 }
 svg.svg-animation {
     overflow: visible;
-    min-width: 215px;
+    min-width: 210px;
     width: 100%;
-    max-width: 260px;
+    max-width: 210px;
     @include  media-md {
         max-width: 350px;
     }

@@ -39,6 +39,7 @@ body {
 		font-size: 16px;
 	}
 	input, textarea {
+		border-radius: 10px;
 		width: 100%;
 		border: 1px solid transparent;
 		outline: none;
@@ -438,6 +439,7 @@ ul,li {
 @import "sections/header";
 @import "sections/1home";
 @import "sections/3opportunities";
+@import "sections/4solution";
 @import "sections/7contact";
 
 @import "sections/footer";

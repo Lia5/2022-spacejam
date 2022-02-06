@@ -1,33 +1,66 @@
 section.contact#contact(data-anchor="#contact") 
     .container
-        h2.title Контакти
-    #map
     .container.contact__container
         .row
-            .contact__body.animated
-                aside.contact__info
-                    //- .contact__text.contact__adress 
-                    //-     | м. Київ, вул. Протасів Яр, 27
-                    //-     br
-                    //-     a(href="#modalMap").modal-open.contact__link Детальний маршрут проїзду 
-                    //- .contact__text Графік роботи (Вт-Нд) 
-                    //- .contact__text з 10:00 до 19:00
-                    .contact__btn
-                        a(href="#modalCons").modal-open.btn Консультация
-                    .contact__items
-                        a(href="tel:+380") +38 (000) 00 - 00 - 000
-                        a(href="mailto:mail@gmail.com").contact__mail mail@gmail.com
-                   
-                    .contact__social
-                        div Ми в социальных сетях
-                        .social__items
-                            a(href="https://www.facebook.com/" target="_blank").social__item
-                                svg.icon
-                                    use(xlink:href="#fb")
-                            a(href="https://www.instagram.com/" target="_blank").social__item
-                                svg.icon
-                                    use(xlink:href="#instagram")
-                        div © 
-                            span.copy-year 2020 
-                            |  Все права защищены
+            .col-xl-4.col-lg-4.col-md-6.col-sm-12
+                .contact__body.animated
+                    aside.contact__info
+                        h2.title Контакти
+                        .contact__text.contact__adress 
+                            | г. Киев, ул. Чигорина, 18
+                        //-     br
+                        //-     a(href="#modalMap").modal-open.contact__link Детальний маршрут проїзду 
+                        //- .contact__text Графік роботи (Вт-Нд) 
+                        //- .contact__text з 10:00 до 19:00
+                        .contact__btn
+                            a(href="#modalCons").modal-open.btn Консультация
+                        .contact__items
+                            a(href="tel:+380") +38 (000) 00 - 00 - 000
+                            a(href="mailto:mail@gmail.com").contact__mail mail@gmail.com
+                    
+                        .contact__social
+                            div Ми в социальных сетях
+                            .social__items
+                                a(href="#" target="_blank").social__item
+                                    svg.icon
+                                        use(xlink:href="#tg")
+                                a(href="#" target="_blank").social__item
+                                    svg.icon
+                                        use(xlink:href="#skype")
+                            div © 
+                                span.copy-year 2020 
+                                |  Все права защищены
+            .col-xl-8.col-lg-8.col-md-6.col-sm-12
+                .contact__form
+                    h2.title Заявка на подключение
+                    form
+                        // Hidden Required Fields
+                        input(type='hidden', name='project_name', value='SpaceJam')
+                        input(type='hidden', name='admin_email', value='mail@gmail.com')
+                        input(type='hidden', name='form_subject', value='Заявка на подключение')
+                        // END Hidden Required Fields
+                        input(type='hidden', name='info', value='Заявка на подключение')
+                        input.utm_source.hidden(type='hidden', name='utm_source')
+                        input.utm_medium.hidden(type='hidden', name='utm_medium')
+                        input.utm_campaign.hidden(type='hidden', name='utm_campaign')
+                        input.utm_term.hidden(type='hidden', name='utm_term')
+                        input.utm_content.hidden(type='hidden', name='utm_content')
+                        .form
+                            .form-line
+                                label
+                                    input(type="text" placeholder="Имя" name="name").rfield.name-icon
+                            .form-line
+                                label
+                                    input(type="text" placeholder="Телефон" name="phone").rfield.phone-mask
+                            .form-line
+                                label
+                                    input(type="email" placeholder="Email" name="email").rfield
+                            .form-line
+                                label
+                                    textarea(name="coment", cols="30", rows="2",placeholder="Комментарий").rfield
+                            .form-line-btn
+                                .btn-finish(data-modal="#modalFinish")
+                                    input(type="submit" value="Отправить").form__btn.btn.btn--black-hover 
+
+
 

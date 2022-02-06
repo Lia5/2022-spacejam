@@ -1,7 +1,12 @@
 .contact {
     position: relative;
-    background: #eeeeee;
-    padding-top: 59px;
+    background: linear-gradient(to bottom, #f5f5f7
+    50%, rgba(104, 164, 48, 0.7) 90%);
+    padding-top: 60px;
+    @include  media-md {
+        background: linear-gradient(195deg, #f5f5f7 30%, rgba(104, 164, 48, 0.7) 90%)
+
+    }
     .title {
         margin-bottom: 37px;
     }
@@ -19,36 +24,34 @@
         color: #fff;
         z-index: 1;
         width: 100%;
-        max-width: 33%;
-        @media only screen and (max-width: 1279px){
-            max-width: 44%;
-        }
-        @media only screen and (max-width: 991px){
-            max-width: 53%;
-        }
-        @media only screen and (max-width: 767px){
-            max-width: 100%;
-        }
+        border-radius: 10px;
         &:before {
             content: "";
             position: absolute;
             width: 78%;
             height: 90%;
             top: -5px;
-            left: -5px;
             background: $accent;
             z-index: -1;
-            @media only screen and (max-width: 749px) {
-                left: 0;
+            left: 0;
+            border-radius: 10px;
+            @include  media-md {
+                left: -5px;
             }
         }
     }
     &__info {
         margin-top: 5px;
-        padding: 44px 44px 20px;
         background: #262627;
-        @media only screen and (max-width: 767px){
-            padding: 50px 14px 20px;
+        padding: 50px 14px 20px;
+        @include  media-md {
+            padding: 44px 44px 20px;
+        }
+        @include  media-lg {
+            padding: 44px 24px 20px;
+        }
+        @include  media-xl {
+            padding: 44px 44px 20px;
         }
     }
     &__text {
@@ -64,11 +67,11 @@
     }
     &__items {
         font-size: 18px;
-        margin: 42px 0 40px;
+        margin: 42px 0 34px;
         text-align: center;
+        @include  media-md {
+            margin-bottom: 40px;
 
-        @media only screen and (max-width: 767px){
-            margin-bottom: 34px;
         }
         a {
             display: block;
@@ -85,9 +88,12 @@
         font-size: 16px;
         text-decoration: underline;
         color: #fff;
-        @media only screen and (max-width: 767px){
-            margin-top: 10px;
-            margin-bottom: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        @include  media-md {
+            margin-top: 0;
+            margin-bottom: 0;
+
         }
         &:hover {
             color: $accent;
@@ -99,16 +105,18 @@
         }
     }
     &__btn {
-        margin-top: 30px;
+        margin-top: 35px;
         letter-spacing: -0.5px;
-        @media only screen and (max-width: 767px){
-            margin-top: 35px;
+        @include  media-md {
+            margin-top: 30px;
         }
         .btn {
-            @media only screen and (max-width: 767px){
-                &.btn--white {
-                    padding: 14px 41px;
-                }
+            &.btn--white {
+                padding: 14px 41px;
+            }
+            @include  media-md {
+                min-width: auto;
+                width: 100%;
             }
         }
     }
@@ -120,86 +128,55 @@
     .icon {
         width: 30px;
         height: 30px;
-        fill: #fff;
         transition: 0.3s;
+        fill: #fff;
+        svg {
+            width: 100%;
+            height: 100%;
+        }
         &:hover {
-            fill: $accent;
+                fill: $accent;
         }
     }
-}
-#map {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    height: calc(100% - 78px);
-    z-index: 1;
+    &__form {
+        width: 100%;
+        max-width: 465px;
+        margin: 0 auto;
+        padding: 50px 14px 20px;
+        @include  media-md {
+            padding: 44px 0 20px;
+        }
+        .form {
+            max-width: 100%;
+        }
+        .btn {
 
-    @media only screen and (max-width: 767px){
-        position: relative;
-        height: 501px;
+            @include  media-md {
+                min-width: auto;
+                width: 100%;
+            }
+            @include  media-lg {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
     }
 }
 .social {
     &__items {
         display: flex;
         justify-content: center;
-        margin-top: 15px;
-        margin-bottom: 18px;
-        @media only screen and (max-width: 767px){
-            margin-top: 14px;
-            margin-bottom: 28px;
+        margin-top: 14px;
+        margin-bottom: 28px;
+        @include  media-md {
+            margin-top: 15px;
+            margin-bottom: 18px;
         }
     }
     &__item + .social__item {
         margin-left: 28px;
     }
 }
-.leaflet-marker-pane :hover {
-    img {
-        opacity: 0.8;
-    }
-    .my-div-icon {
-        &:after {
-            opacity: 0.8;
-        }
-    }
-}
-.my-div-icon {
-    position: relative;
-    &:after {
-        content: "Велохата";
-        position: absolute;
-        top: 7px;
-        left: 30px;
-        font-size: 20px;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: #262627;
-    }
-    // width: 100px;
-    // height: 100px;
-}
-// .map-scroll:before {
-//     pointer-events: none;
-//     content: 'Use ctrl + scroll to zoom the map';
-//     position: absolute;
-//     top: 60%;
-//     left: 50%;
-//     z-index: 999;
-//     font-size: 30px;
-// }
-// .map-scroll:after {
-//     pointer-events: none;
-//     position: absolute;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     top: 0;
-//     content: '';
-//     // background: rgba(0, 0, 0, 0.18);
-//     z-index: 999;
-// }
-
 @keyframes fadeInUp {
     from {
       opacity: 0;
