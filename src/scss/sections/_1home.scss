@@ -1,8 +1,7 @@
 .home {
     overflow: hidden;
     position: relative; 
-    background: url('/img/bg2.png') no-repeat;
-    background: linear-gradient(to bottom, #fbfbfd 50%, rgba(104, 164, 48, 0.7) 90%);
+    // background: linear-gradient(to bottom, #fbfbfd 50%, rgba(104, 164, 48, 0.7) 90%);
     padding: 100px 40px 40px;
     z-index: 1;
     @include  media-md {
@@ -18,11 +17,13 @@
         }
     }
     &__logo {
+        display: none;
         max-width: 210px;
         margin: 0 auto;
         transition: 0.8s;
         @include  media-md {
             margin: 0;
+            display: block;
             max-width: 350px;
             opacity: 1;
             transform: translateY(0) translateX(0) scale(1);
