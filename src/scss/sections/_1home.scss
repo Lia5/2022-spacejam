@@ -110,7 +110,9 @@
         display: flex;
         justify-content: center;
         margin-bottom: 60px;
+        display: none;
         @include  media-md {
+            display: flex;
             justify-content: flex-end;
             margin-bottom: 0;
         }
