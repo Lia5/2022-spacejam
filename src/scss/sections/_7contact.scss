@@ -21,7 +21,6 @@
     &__body {
         opacity: 0;
         position: relative;
-        color: #fff;
         z-index: 1;
         width: 100%;
         border-radius: 10px;
@@ -59,7 +58,6 @@
         font-size: 18px;
         text-align: center;
         margin-bottom: 19px;
-        color: #fff;
     }
     &__adress {
         line-height: 1.5;
@@ -75,7 +73,6 @@
         }
         a {
             display: block;
-            color: #fff;
             & + a {
                 margin-top: 13px;
             }
@@ -87,7 +84,6 @@
     &__link {
         font-size: 16px;
         text-decoration: underline;
-        color: #fff;
         margin-top: 10px;
         margin-bottom: 10px;
         @include  media-md {
@@ -129,7 +125,7 @@
         width: 30px;
         height: 30px;
         transition: 0.3s;
-        fill: #fff;
+        fill: #000;
         svg {
             width: 100%;
             height: 100%;
