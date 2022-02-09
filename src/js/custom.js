@@ -56,8 +56,19 @@ $(function() {
         var year = new Date().getFullYear()
         $('.copy-year').html(year);
     }
-    if($('.partners__items').length) {
-        $('.partners__items').simplemarquee({
+        
+    if($('.marquee').length) {
+        $('.marquee').marquee({
+        duration: 10000,
+        startVisible: true,
+        duplicated: true,
+
+        // speed: 7000,
+        gap: 50,
+        delayBeforeStart: 0,
+        direction: 'left',
+        duplicated: true,
+        pauseOnHover: true
         });
     }
     if(jQuery('.scroll-to').length) {

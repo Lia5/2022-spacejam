@@ -56,7 +56,7 @@ gulp.task('js', function() {
 		// 'myapp/libs/intl-tel-input/js/utils.js',
 		// 'myapp/libs/intl-tel-input/js/intlTelInput.js',
 		'src/libs/3.mask/jquery.maskedinput.min.js',
-		'src/libs/jquery.simplemarquee.js',
+		'src/libs/jquery.marquee.min.js', //бегущая строка
 		// 'src/libs/preload/preload.js',
 		// 'myapp/libs/2.slick/slick.js',
 		// 'myapp/libs/owlcarousel/dist/owlcarousel.js',
@@ -69,7 +69,6 @@ gulp.task('js', function() {
 		// 'src/libs/3.mask/jquery.mask.min.js',
 		// 'src/libs/fancybox/jquery.fancybox.js',
 		// 'src/libs/responsive-tabs.js',
-		// 'src/libs/jquery.marquee.min.js' //бегущая строка
 		// 'src/libs/owlcarousel/dist/owlcarousel.js',
 		// 'src/libs/mylazyjs.js', // Always at the end
 		])
