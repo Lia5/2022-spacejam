@@ -62,8 +62,7 @@ $(function() {
         duration: 10000,
         startVisible: true,
         duplicated: true,
-
-        // speed: 7000,
+        speed: 50,
         gap: 50,
         delayBeforeStart: 0,
         direction: 'left',
