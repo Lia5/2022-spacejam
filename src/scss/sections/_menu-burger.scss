@@ -168,7 +168,7 @@
             content: "";
             position: absolute;
             top: 18px;
-            right: 0;
+            right: 10px;
             width: 0;
             height: 0;
             border: 5px solid #86868b;
@@ -180,5 +180,14 @@
     }
     &.active:after {
         transform: rotate(180deg);
+    }
+}
+.main-menu .parent-menu {
+    padding-right: 10px;
+    @include  media-md {
+        padding-right: 25px;
+    }
+    @include  media-xl {
+        padding-right: 25px;
     }
 }
