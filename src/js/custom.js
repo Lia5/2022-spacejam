@@ -108,16 +108,6 @@ $(function() {
             }
         });
     }
-    //select-number form
-    if(jQuery('.phone-mask').length) {
-
-        $('.phone-mask').mask('+380(99) 999-9999').on('click', function () {
-            console.log($(this).val());
-            if ($(this).val() === '+380(__) ___-____') {
-                $(this).get(0).setSelectionRange(0, 0);
-            }
-        });
-    }
     // if(jQuery('.sticky').length) {
     //     $('.sticky .close').on('click', function(){
     //         $('.sticky').removeClass('active on').css('display', 'none');

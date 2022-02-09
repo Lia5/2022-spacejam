@@ -1,0 +1,30 @@
+include ../common/_var
+include ../common/_mixin
+
+doctypehtml
+html(lang='ru')
+	include ../common/head
+	body
+		.site
+			include ../common/sprite
+			include ../common/header
+			section.section.vacancies#vacancies
+				.container
+					h2.title Вакансии
+					.vacancies__body 
+						p Sales manager
+						p UI / UX дизайнер
+						p Агент службы поддержки (1-я линия)
+						p Агент службы поддержки (2-я линия)
+						p Офис-менеджер
+						p Recruiter
+						p Супервайзер технической поддержки
+						p Менеджер по сопровождению VIP клиентов
+						p Content manager
+						p Node.js developer
+						p Middle QA Engineer
+			include ../common/7contact 
+	
+			include ../common/footer 
+			include ../common/modal
+	// END body

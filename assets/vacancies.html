@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" href="img/favicon/favicon.ico"  type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/android-chrome-192x192.png">
+    <meta name="description" content="SpaceJam | Payments online, Прием и отправка платежей при помощи гривневых карт и криптовалют">
+    <meta property="og:site_name" content="SpaceJam">
+    <meta property="og:title" content="SpaceJam | Payments online">
+    <meta property="og:description" content="SpaceJam | Payments online, Прием и отправка платежей при помощи гривневых карт и криптовалют">
+    <meta property="og:image" content="img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+    <title>SpaceJam | Payments online</title>
+  </head>
+  <body>
+    <div class="site">
+      <svg style="display: none;">
+        <symbol id="fb" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+          <g>
+            <g>
+              <path d="M256,375.333c-5.523,0-10,4.477-10,10c0,0.013,0,0.027,0,0.04s0,0.027,0,0.04v0.08c0,5.523,4.477,10,10,10s10-4.477,10-10                c0-0.014,0-0.026,0-0.04c0-0.014,0-0.026,0-0.04c0-0.014,0-0.027,0-0.04s0-0.027,0-0.04C266,379.81,261.523,375.333,256,375.333z"></path>
+            </g>
+          </g>
+          <g>
+            <g>
+              <path d="M414,0H98C43.962,0,0,43.962,0,98v316c0,54.038,43.962,98,98,98h158c5.523,0,10-4.477,10-10v-77.5c0-5.523-4.477-10-10-10                s-10,4.477-10,10V492H98c-43.009,0-78-34.991-78-78V98c0-43.009,34.991-78,78-78h316c43.009,0,78,34.991,78,78v316                c0,43.009-34.991,78-78,78h-64V315.501h57.981c5.136,0,9.436-3.89,9.95-8.999l7.191-71.455c0.283-2.813-0.637-5.613-2.533-7.709                c-1.896-2.096-4.591-3.292-7.417-3.292H350v-37.521c0-6.791,2.163-9.316,7.981-9.316h56.742c5.523,0,10-4.477,10-10v-69.66                c0-5.523-4.477-10-10-10h-74.517c-42.223,0-64.615,18.546-75.964,34.104c-15.873,21.758-18.243,47.454-18.243,60.834v42.007h-49                c-5.523,0-10,4.477-10,10V305.5c0,5.523,4.477,10,10,10h49V344c0,5.523,4.477,10,10,10s10-4.477,10-10v-38.5                c0-5.523-4.477-10-10-10h-49v-51.007h49c5.523,0,10-4.477,10-10v-52.007c0-22.532,7.231-74.938,74.207-74.938h64.517v49.66                h-46.742c-12.908,0-27.981,7.678-27.981,29.316v47.521c0,5.523,4.477,10,10,10h64.115l-5.178,51.455H340c-5.523,0-10,4.477-10,10                V502c0,5.523,4.477,10,10,10h74c54.038,0,98-43.962,98-98V98C512,43.962,468.038,0,414,0z"></path>
+            </g>
+          </g>
+          <g>
+            <g>
+              <path d="M58,102.5c-5.523,0-10,4.477-10,10V196c0,5.523,4.477,10,10,10s10-4.477,10-10v-83.5C68,106.977,63.523,102.5,58,102.5z"></path>
+            </g>
+          </g>
+          <g>
+            <g>
+              <path d="M58,229.382c-5.523,0-10,4.477-10,10v0.118c0,5.523,4.477,10,10,10s10-4.477,10-10v-0.118                C68,233.859,63.523,229.382,58,229.382z"></path>
+            </g>
+          </g>
+        </symbol>
+        <symbol id="instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+          <g>
+            <g>
+              <path d="M362,0H150C67.29,0,0,67.29,0,150v212c0,82.71,67.29,150,150,150h212c82.71,0,150-67.29,150-150V150                C512,67.29,444.71,0,362,0z M492,362c0,71.682-58.318,130-130,130H150c-71.682,0-130-58.318-130-130V150                C20,78.318,78.318,20,150,20h212c71.682,0,130,58.318,130,130V362z"></path>
+            </g>
+          </g>
+          <g>
+            <g>
+              <path d="M362,44H150C91.551,44,44,91.551,44,150v212c0,58.449,47.551,106,106,106h61c5.523,0,10-4.477,10-10s-4.477-10-10-10h-61                c-47.42,0-86-38.58-86-86V150c0-47.42,38.58-86,86-86h212c47.42,0,86,38.58,86,86v212c0,47.42-38.58,86-86,86h-60.333                c-5.523,0-10,4.477-10,10s4.477,10,10,10H362c58.449,0,106-47.551,106-106V150C468,91.551,420.449,44,362,44z"></path>
+            </g>
+          </g>
+          <g>
+            <g>
+              <path d="M263.07,450.93c-1.86-1.86-4.44-2.93-7.07-2.93s-5.21,1.07-7.07,2.93S246,455.37,246,458s1.07,5.21,2.93,7.07                S253.37,468,256,468s5.21-1.07,7.07-2.93c1.86-1.86,2.93-4.44,2.93-7.07S264.93,452.79,263.07,450.93z"></path>
+            </g>
+          </g>
+          <g>
+            <g>
+              <path d="M175.83,155.71c-3.777-4.03-10.104-4.236-14.135-0.461l-0.443,0.417c-4.017,3.79-4.201,10.119-0.41,14.136                c1.967,2.085,4.618,3.137,7.275,3.137c2.462,0,4.929-0.904,6.861-2.727l0.391-0.367C179.399,166.069,179.606,159.74,175.83,155.71                z"></path>
+            </g>
+          </g>
+          <g>
+            <g>
+              <path d="M256,118c-21.964,0-43.824,5.291-63.217,15.301c-4.907,2.533-6.832,8.565-4.299,13.473                c2.534,4.907,8.566,6.831,13.473,4.299C218.762,142.398,236.945,138,256,138c65.065,0,118,52.935,118,118s-52.935,118-118,118                s-118-52.935-118-118c0-20.419,5.295-40.537,15.313-58.178c2.727-4.802,1.045-10.906-3.758-13.634                c-4.803-2.726-10.906-1.045-13.634,3.758C124.197,208.592,118,232.125,118,256c0,76.093,61.907,138,138,138s138-61.907,138-138                S332.093,118,256,118z"></path>
+            </g>
+          </g>
+          <g>
+            <g>
+              <path d="M256,166c-49.626,0-90,40.374-90,90c0,49.626,40.374,90,90,90c49.626,0,90-40.374,90-90C346,206.374,305.626,166,256,166z                M256,326c-38.598,0-70-31.402-70-70c0-38.598,31.402-70,70-70c38.598,0,70,31.402,70,70C326,294.598,294.598,326,256,326z"></path>
+            </g>
+          </g>
+          <g>
+            <g>
+              <path d="M387.25,86.75c-20.953,0-38,17.047-38,38s17.047,38,38,38s38-17.047,38-38S408.203,86.75,387.25,86.75z M387.25,142.75                c-9.925,0-18-8.075-18-18s8.075-18,18-18s18,8.075,18,18S397.175,142.75,387.25,142.75z"></path>
+            </g>
+          </g>
+        </symbol>
+        <symbol id="callback" viewBox="0 -256 1792 1792" xmlns="http://www.w3.org/2000/svg">
+          <g transform="matrix(1,0,0,-1,159.45763,1293.0169)">
+            <path d="m 1408,296 q 0,-27 -10,-70.5 Q 1388,182 1377,157 1356,107 1255,51 1161,0 1069,0 1042,0 1016.5,3.5 991,7 959,16 927,25 911.5,30.5 896,36 856,51 816,66 807,69 709,104 632,152 504,231 367.5,367.5 231,504 152,632 104,709 69,807 66,816 51,856 36,896 30.5,911.5 25,927 16,959 7,991 3.5,1016.5 0,1042 0,1069 q 0,92 51,186 56,101 106,122 25,11 68.5,21 43.5,10 70.5,10 14,0 21,-3 18,-6 53,-76 11,-19 30,-54 19,-35 35,-63.5 16,-28.5 31,-53.5 3,-4 17.5,-25 14.5,-21 21.5,-35.5 7,-14.5 7,-28.5 0,-20 -28.5,-50 -28.5,-30 -62,-55 -33.5,-25 -62,-53 -28.5,-28 -28.5,-46 0,-9 5,-22.5 5,-13.5 8.5,-20.5 3.5,-7 14,-24 10.5,-17 11.5,-19 76,-137 174,-235 98,-98 235,-174 2,-1 19,-11.5 17,-10.5 24,-14 7,-3.5 20.5,-8.5 13.5,-5 22.5,-5 18,0 46,28.5 28,28.5 53,62 25,33.5 55,62 30,28.5 50,28.5 14,0 28.5,-7 14.5,-7 35.5,-21.5 21,-14.5 25,-17.5 25,-15 53.5,-31 28.5,-16 63.5,-35 35,-19 54,-30 70,-35 76,-53 3,-7 3,-21 z"></path>
+          </g>
+        </symbol>
+        <symbol id="phone" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.006 512.006" style="enable-background:new 0 0 512.006 512.006;" xml:space="preserve">
+          <g>
+            <g>
+              <g>
+                <path d="M502.05,407.127l-56.761-37.844L394.83,335.65c-9.738-6.479-22.825-4.355-30.014,4.873l-31.223,40.139        c-6.707,8.71-18.772,11.213-28.39,5.888c-21.186-11.785-46.239-22.881-101.517-78.23c-55.278-55.349-66.445-80.331-78.23-101.517        c-5.325-9.618-2.822-21.683,5.888-28.389l40.139-31.223c9.227-7.188,11.352-20.275,4.873-30.014l-32.6-48.905L104.879,9.956        C98.262,0.03,85.016-2.95,74.786,3.185L29.95,30.083C17.833,37.222,8.926,48.75,5.074,62.277        C-7.187,106.98-9.659,205.593,148.381,363.633s256.644,155.56,301.347,143.298c13.527-3.851,25.055-12.758,32.194-24.876        l26.898-44.835C514.956,426.989,511.976,413.744,502.05,407.127z"></path>
+                <path d="M291.309,79.447c82.842,0.092,149.977,67.226,150.069,150.069c0,4.875,3.952,8.828,8.828,8.828        c4.875,0,8.828-3.952,8.828-8.828c-0.102-92.589-75.135-167.622-167.724-167.724c-4.875,0-8.828,3.952-8.828,8.828        C282.481,75.494,286.433,79.447,291.309,79.447z"></path>
+                <path d="M291.309,132.412c53.603,0.063,97.04,43.501,97.103,97.103c0,4.875,3.952,8.828,8.828,8.828        c4.875,0,8.828-3.952,8.828-8.828c-0.073-63.349-51.409-114.686-114.759-114.759c-4.875,0-8.828,3.952-8.828,8.828        C282.481,128.46,286.433,132.412,291.309,132.412z"></path>
+                <path d="M291.309,185.378c24.365,0.029,44.109,19.773,44.138,44.138c0,4.875,3.952,8.828,8.828,8.828        c4.875,0,8.828-3.952,8.828-8.828c-0.039-34.111-27.682-61.754-61.793-61.793c-4.875,0-8.828,3.952-8.828,8.828        C282.481,181.426,286.433,185.378,291.309,185.378z"></path>
+              </g>
+            </g>
+          </g>
+        </symbol>
+        <symbol id="lk" xmlns="http://www.w3.org/2000/svg" version="1.0" viewbox="0 0 512.000000 512.000000" preserveaspectratio="xMidYMid meet">
+          <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" stroke="none">
+            <path d="M2358 5055 c-384 -63 -732 -321 -911 -675 -229 -454 -143 -1032 210 -1401 177 -185 418 -317 659 -363 l69 -13 -90 -7 c-184 -15 -416 -66 -616 -135 -733 -253 -1292 -801 -1522 -1494 -42 -124 -81 -309 -96 -449 -12 -107 -14 -334 -5 -415 l7 -53 2498 0 2497 0 8 77 c18 201 -11 510 -71 730 -248 922 -1117 1626 -2143 1736 -114 13 -116 13 -64 20 71 10 243 67 323 107 358 179 610 522 675 918 19 117 14 338 -11 452 -103 469 -475 844 -942 951 -117 27 -355 34 -475 14z m380 -331 c187 -38 326 -115 467 -258 138 -140 212 -274 251 -459 19 -90 18 -269 -2 -364 -87 -420 -454 -722 -880 -724 -262 -1 -468 82 -653 264 -113 111 -184 226 -237 387 -26 80 -28 96 -28 255 -1 199 9 246 84 401 88 182 221 320 395 411 86 44 186 80 262 93 84 14 260 11 341 -6z m152 -2470 c419 -62 790 -221 1109 -473 420 -330 693 -820 736 -1319 l8 -82 -2182 0 -2181 0 0 38 c0 55 27 220 50 314 127 494 453 923 920 1211 292 179 672 300 1045 331 95 8 390 -4 495 -20z"></path>
+          </g>
+        </symbol>
+        <symbol id="tg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50">
+          <path d="M46.137,6.552c-0.75-0.636-1.928-0.727-3.146-0.238l-0.002,0C41.708,6.828,6.728,21.832,5.304,22.445 c-0.259,0.09-2.521,0.934-2.288,2.814c0.208,1.695,2.026,2.397,2.248,2.478l8.893,3.045c0.59,1.964,2.765,9.21,3.246,10.758 c0.3,0.965,0.789,2.233,1.646,2.494c0.752,0.29,1.5,0.025,1.984-0.355l5.437-5.043l8.777,6.845l0.209,0.125 c0.596,0.264,1.167,0.396,1.712,0.396c0.421,0,0.825-0.079,1.211-0.237c1.315-0.54,1.841-1.793,1.896-1.935l6.556-34.077 C47.231,7.933,46.675,7.007,46.137,6.552z M22,32l-3,8l-3-10l23-17L22,32z"></path>
+        </symbol>
+        <symbol id="skype" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50">
+          <path d="M 14.28125 0 C 6.410156 0 0 6.324219 0 14.09375 C 0 16.476563 0.621094 18.800781 1.78125 20.875 C 1.507813 22.3125 1.375 23.792969 1.375 25.25 C 1.375 38.25 12.074219 48.8125 25.25 48.8125 C 26.601563 48.8125 27.953125 48.722656 29.28125 48.5 C 31.257813 49.488281 33.480469 50 35.71875 50 C 43.589844 50 50 43.675781 50 35.90625 C 50 33.820313 49.539063 31.828125 48.65625 29.96875 C 48.976563 28.433594 49.15625 26.847656 49.15625 25.25 C 49.15625 12.253906 38.425781 1.6875 25.25 1.6875 C 24.011719 1.6875 22.761719 1.78125 21.53125 1.96875 C 19.335938 0.683594 16.847656 0 14.28125 0 Z M 25.09375 9.375 C 27.140625 9.375 28.933594 9.597656 30.4375 10.0625 C 31.945313 10.523438 33.222656 11.136719 34.21875 11.90625 C 35.226563 12.683594 35.996094 13.511719 36.46875 14.375 C 36.945313 15.246094 37.1875 16.132813 37.1875 16.96875 C 37.1875 17.777344 36.84375 18.484375 36.21875 19.125 C 35.59375 19.765625 34.808594 20.09375 33.875 20.09375 C 33.027344 20.09375 32.367188 19.898438 31.90625 19.5 C 31.476563 19.125 31.023438 18.554688 30.53125 17.71875 C 29.960938 16.648438 29.292969 15.777344 28.5 15.1875 C 27.730469 14.613281 26.421875 14.34375 24.65625 14.34375 C 23.015625 14.34375 21.675781 14.640625 20.6875 15.28125 C 19.730469 15.898438 19.28125 16.628906 19.28125 17.46875 C 19.28125 17.984375 19.441406 18.410156 19.75 18.78125 C 20.078125 19.171875 20.511719 19.496094 21.09375 19.78125 C 21.695313 20.078125 22.316406 20.332031 22.9375 20.5 C 23.574219 20.671875 24.660156 20.945313 26.125 21.28125 C 27.976563 21.675781 29.679688 22.089844 31.1875 22.5625 C 32.710938 23.046875 34.019531 23.652344 35.09375 24.34375 C 36.1875 25.046875 37.070313 25.949219 37.6875 27.03125 C 38.304688 28.113281 38.59375 29.441406 38.59375 31 C 38.589844 32.859375 38.066406 34.546875 37 36.03125 C 35.9375 37.511719 34.371094 38.703125 32.34375 39.53125 C 30.335938 40.351563 27.925781 40.75 25.1875 40.75 C 21.898438 40.75 19.148438 40.191406 17 39.0625 C 15.460938 38.246094 14.175781 37.117188 13.21875 35.75 C 12.242188 34.367188 11.75 33.011719 11.75 31.6875 C 11.75 30.863281 12.085938 30.152344 12.71875 29.5625 C 13.347656 28.984375 14.136719 28.6875 15.09375 28.6875 C 15.878906 28.6875 16.574219 28.914063 17.125 29.375 C 17.65625 29.816406 18.105469 30.472656 18.46875 31.3125 C 18.875 32.230469 19.308594 32.980469 19.78125 33.59375 C 20.226563 34.175781 20.863281 34.679688 21.6875 35.0625 C 22.515625 35.453125 23.652344 35.65625 25.03125 35.65625 C 26.925781 35.65625 28.460938 35.253906 29.625 34.46875 C 30.765625 33.703125 31.34375 32.785156 31.34375 31.65625 C 31.34375 30.765625 31.03125 30.046875 30.4375 29.5 C 29.8125 28.925781 28.992188 28.492188 28 28.1875 C 26.957031 27.871094 25.558594 27.519531 23.8125 27.15625 C 21.4375 26.652344 19.417969 26.046875 17.8125 25.375 C 16.167969 24.683594 14.84375 23.722656 13.875 22.53125 C 12.890625 21.316406 12.375 19.820313 12.375 18.03125 C 12.375 16.324219 12.902344 14.761719 13.9375 13.4375 C 14.957031 12.125 16.449219 11.105469 18.375 10.40625 C 20.273438 9.710938 22.539063 9.375 25.09375 9.375 Z"></path>
+        </symbol>
+        <symbol id="click" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 228.000000 225.000000">
+          <g transform="translate(0.000000,225.000000) scale(0.100000,-0.100000)" stroke="none">
+            <path d="M151 2163 c-45 -24 -71 -61 -77 -109 -9 -73 47 -142 125 -153 35 -5 62 -28 225 -184 l186 -179 0 -79 c0 -43 -3 -79 -7 -78 -5 0 -63 12 -131 27 -119 27 -123 28 -140 62 -33 65 -121 92 -188 57 -38 -19 -64 -57 -71 -102 -7 -44 27 -115 66 -138 62 -36 159 -12 191 49 12 22 19 25 50 21 19 -2 79 -15 133 -27 l97 -22 0 -144 0 -144 -133 0 -132 0 -14 31 c-7 17 -28 39 -45 50 -39 24 -108 25 -148 1 -34 -19 -68 -78 -68 -118 0 -40 30 -94 64 -115 66 -40 175 -12 199 51 l11 30 133 0 133 0 0 -283 c0 -278 1 -285 23 -328 15 -27 38 -52 63 -66 34 -20 54 -23 152 -23 l112 0 0 -90 0 -90 35 0 35 0 0 90 0 90 228 2 227 3 3 25 c2 19 -10 37 -48 75 l-50 49 0 105 0 106 -86 86 c-67 68 -87 93 -87 115 0 31 34 64 66 64 13 0 79 -58 182 -160 89 -88 166 -160 171 -160 27 0 34 28 34 129 l0 105 55 -54 55 -54 0 -308 0 -308 35 0 35 0 0 321 0 322 -90 91 c-68 70 -90 99 -90 119 l0 27 133 0 133 0 11 -30 c24 -63 133 -91 199 -51 34 21 64 75 64 115 0 40 -34 99 -68 119 -40 23 -109 22 -148 -2 -17 -11 -38 -33 -45 -50 l-14 -31 -132 0 -133 0 0 144 0 144 97 22 c54 12 114 25 133 27 31 4 38 1 50 -21 32 -61 129 -85 191 -49 39 23 73 94 66 138 -7 45 -33 83 -71 102 -67 35 -154 8 -190 -58 -18 -34 -23 -36 -125 -58 -58 -12 -116 -25 -128 -28 -22 -5 -23 -3 -23 75 l0 80 188 181 c160 155 191 181 218 181 17 0 46 10 65 23 45 30 71 82 65 130 -8 69 -54 115 -123 123 -48 6 -100 -20 -130 -65 -31 -46 -30 -98 2 -146 l26 -37 -157 -151 c-86 -84 -160 -153 -164 -155 -3 -1 -13 9 -20 23 -23 43 -76 68 -154 74 l-71 6 96 84 c53 45 114 91 135 101 22 9 50 30 64 44 21 23 25 38 25 86 0 51 -4 63 -30 90 -40 42 -93 57 -145 41 -40 -12 -81 -55 -95 -99 -11 -37 3 -90 35 -125 l29 -33 -112 -97 -112 -97 -62 0 -63 0 0 93 0 92 31 14 c17 7 39 28 50 45 23 38 25 106 4 146 -18 35 -81 70 -126 70 -45 0 -98 -29 -120 -64 -25 -41 -25 -112 0 -152 11 -17 33 -38 50 -45 l31 -14 0 -92 0 -93 -62 0 -63 0 -112 97 -112 97 29 33 c32 35 46 88 35 125 -14 44 -55 87 -95 99 -52 16 -105 1 -145 -41 -26 -27 -30 -39 -30 -90 0 -48 4 -63 25 -86 14 -14 42 -35 64 -44 21 -10 82 -56 135 -101 l96 -84 -71 -6 c-78 -6 -131 -31 -154 -74 -7 -14 -17 -24 -20 -23 -4 2 -78 71 -164 154 l-157 151 25 38 c16 23 26 52 26 74 0 42 -28 93 -64 116 -39 26 -96 29 -135 8z m106 -75 c29 -27 30 -71 3 -98 -26 -26 -68 -25 -97 2 -29 27 -29 65 -1 95 27 29 65 29 95 1z m468 -3 c14 -13 25 -34 25 -46 0 -32 -38 -69 -72 -69 -15 0 -37 9 -48 20 -41 41 -12 120 45 120 14 0 37 -11 50 -25z m466 7 c15 -13 22 -30 22 -50 0 -45 -28 -72 -73 -72 -45 0 -73 27 -73 72 0 37 32 68 73 68 15 0 38 -8 51 -18z m459 -2 c42 -42 12 -120 -47 -120 -34 0 -73 36 -73 67 0 31 43 73 75 73 14 0 34 -9 45 -20z m467 -2 c13 -12 23 -33 23 -47 0 -34 -37 -71 -72 -71 -61 0 -91 78 -46 120 28 26 66 26 95 -2z m-546 -467 c23 -23 29 -39 29 -70 l0 -41 -460 0 -460 0 0 41 c0 31 6 47 29 70 l29 29 402 0 402 0 29 -29z m-1317 -162 c42 -33 31 -100 -20 -119 -18 -7 -33 -6 -53 5 -48 24 -55 72 -16 110 13 14 33 25 43 25 11 0 31 -9 46 -21z m1861 -4 c39 -38 32 -86 -16 -110 -49 -26 -99 8 -99 69 0 28 42 66 72 66 10 0 30 -11 43 -25z m-515 -392 l0 -378 -77 77 -76 76 21 51 c17 38 22 70 22 133 0 71 -4 92 -29 143 -35 73 -98 137 -171 173 -48 24 -67 27 -150 27 -84 0 -102 -3 -152 -28 -74 -36 -134 -97 -169 -172 -25 -51 -29 -72 -29 -145 0 -73 4 -94 29 -147 36 -75 98 -137 171 -172 46 -22 71 -26 149 -27 l93 -2 44 -43 c31 -31 44 -51 44 -71 l0 -28 -320 0 -320 0 0 455 0 455 460 0 460 0 0 -377z m-332 206 c68 -34 105 -72 135 -139 24 -53 28 -146 8 -202 l-13 -38 -33 26 c-18 14 -48 27 -67 30 -46 8 -104 -18 -126 -56 -9 -16 -20 -30 -24 -30 -5 0 -8 -18 -8 -41 0 -25 7 -47 17 -57 16 -16 14 -17 -22 -20 -98 -8 -203 57 -251 154 -22 46 -28 71 -28 123 0 115 53 199 156 250 50 25 73 31 128 31 55 0 78 -6 128 -31z m-1005 -237 c27 -24 19 -80 -14 -105 -22 -15 -33 -17 -55 -10 -16 5 -36 21 -44 36 -11 19 -12 33 -5 54 6 15 22 33 35 40 28 14 56 9 83 -15z m1860 -4 c9 -11 17 -30 17 -43 0 -30 -28 -63 -60 -70 -38 -9 -80 27 -80 69 0 68 78 95 123 44z m-803 -611 c0 -33 6 -49 25 -67 14 -13 25 -27 25 -32 0 -12 -568 -10 -612 2 -49 14 -78 52 -78 101 l0 39 320 0 320 0 0 -43z"></path>
+            <path d="M750 775 c0 -33 2 -35 35 -35 33 0 35 2 35 35 0 33 -2 35 -35 35 -33 0 -35 -2 -35 -35z"></path>
+            <path d="M750 635 c0 -33 2 -35 35 -35 33 0 35 2 35 35 0 33 -2 35 -35 35 -33 0 -35 -2 -35 -35z"></path>
+            <path d="M890 635 c0 -33 2 -35 35 -35 33 0 35 2 35 35 0 33 -2 35 -35 35 -33 0 -35 -2 -35 -35z"></path>
+            <path d="M1170 1080 l-105 -99 -41 40 -40 39 -24 -25 -24 -25 54 -55 c32 -32 63 -55 75 -55 14 0 65 42 138 111 64 61 117 116 117 123 0 12 -31 47 -41 46 -2 -1 -51 -46 -109 -100z"></path>
+          </g>
+        </symbol>
+      </svg>
+      <header class="header">
+        <div class="container"><a class="scroll-to logo" href="#first"><img src="img/logo.svg" alt="logo"></a>
+          <div class="menu-wrap">
+            <div class="menu-toggle"> 
+              <div class="one"></div>
+              <div class="two"></div>
+              <div class="three"></div>
+            </div>
+            <nav class="main-menu"> 
+              <ul>
+                <li><a class="parent-menu" href="#first">SpaceJam</a>
+                  <ul class="submenu">
+                    <li class="submenu__item"><a href="about.html">О нас</a></li>
+                    <li class="submenu__item"><a href="vacancies.html">Вакансии</a></li>
+                    <li class="submenu__item"><a href="#">Материалы для СМИ</a></li>
+                  </ul>
+                </li>
+                <li><a href="opportunities.html">Возможности</a></li>
+                <li><a class="scroll-to" href="#contact" data-menuanchor="#contact">Контакты</a></li>
+                <li>
+                  <div class="lang--mob"><a class="lang__item" href="index-ru.html">RU</a><span>|</span><a class="lang__item current" href="#">UA</a><span>|</span><a class="lang__item" href="index-en.html">EN</a></div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header__group">
+            <div class="header__lk"><a class="btn" href="#"> 
+                <svg class="icon icon-lk">
+                  <use xlink:href="#lk"></use>
+                </svg><span>Личный кабинет</span></a></div>
+            <div class="header__lang">
+              <div class="lang current">RU</div>
+              <div class="lang__list"><a class="lang__item" href="index-ua.html">UA</a><a class="lang__item" href="index-en.html">EN</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="section vacancies" id="vacancies">
+        <div class="container">
+          <h2 class="title">Вакансии</h2>
+          <div class="vacancies__body"> 
+            <p>Sales manager</p>
+            <p>UI / UX дизайнер</p>
+            <p>Агент службы поддержки (1-я линия)</p>
+            <p>Агент службы поддержки (2-я линия)</p>
+            <p>Офис-менеджер</p>
+            <p>Recruiter</p>
+            <p>Супервайзер технической поддержки</p>
+            <p>Менеджер по сопровождению VIP клиентов</p>
+            <p>Content manager</p>
+            <p>Node.js developer</p>
+            <p>Middle QA Engineer</p>
+          </div>
+        </div>
+      </section>
+      <section class="section order">
+        <div class="container form__container">
+          <div class="row">
+            <div class="col-12">
+              <div class="contact__form">
+                <h2 class="title">Заявка на подключение</h2>
+                <form>
+                  <!-- Hidden Required Fields-->
+                  <input type="hidden" name="project_name" value="SpaceJam">
+                  <input type="hidden" name="admin_email" value="mail@gmail.com">
+                  <input type="hidden" name="form_subject" value="Заявка на подключение">
+                  <!-- END Hidden Required Fields-->
+                  <input type="hidden" name="info" value="Заявка на подключение">
+                  <input class="utm_source hidden" type="hidden" name="utm_source">
+                  <input class="utm_medium hidden" type="hidden" name="utm_medium">
+                  <input class="utm_campaign hidden" type="hidden" name="utm_campaign">
+                  <input class="utm_term hidden" type="hidden" name="utm_term">
+                  <input class="utm_content hidden" type="hidden" name="utm_content">
+                  <div class="form">
+                    <div class="form-line">
+                      <label>
+                        <input class="rfield name-icon" type="text" placeholder="Имя" name="name">
+                      </label>
+                    </div>
+                    <div class="form-line">
+                      <label>
+                        <input class="rfield" type="email" placeholder="Email" name="email">
+                      </label>
+                    </div>
+                    <div class="form-line">
+                      <label>
+                        <textarea class="rfield" name="coment" cols="30" rows="2" placeholder="Комментарий"></textarea>
+                      </label>
+                    </div>
+                    <div class="form-line-btn">
+                      <div class="btn-finish" data-modal="#modalFinish">
+                        <input class="form__btn btn btn--black-hover" type="submit" value="Отправить">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact" id="contact" data-anchor="#contact"> 
+        <div class="container contact__container">
+          <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+              <div class="contact__body animated">
+                <aside class="contact__info">
+                  <h2 class="title">Контакты</h2>
+                  <div class="contact__group">
+                    <div class="contact__text">Телефон</div><a href="tel:+380443223322">+380 44 322 33 22</a>
+                  </div>
+                  <div class="contact__group">
+                    <div class="contact__text">Email</div><a class="contact__mail" href="mailto:info@spacejam.online">info@spacejam.online</a>
+                    <div class="contact__text">ул. Чигорина 18, Киев</div>
+                  </div>
+                  <div class="contact__group">
+                    <div class="contact__text">Нужна помощь? </div>
+                    <div class="contact__text">Наша команда поддержки готова помочь вам 24/7.</div>
+                  </div>
+                  <div class="contact__group">
+                    <div class="contact__text">Служба поддержки</div>
+                    <div class="contact__text">E-mail: <a class="contact__mail" href="mailto: support@spacejam.online"> support@spacejam.online</a></div>
+                  </div>
+                  <div class="contact__group">
+                    <div class="contact__text">Технические вопросы</div>
+                    <div class="contact__text">E-mail: <a class="contact__mail" href="mailto: technical@spacejam.online"> technical@spacejam.online</a></div>
+                  </div>
+                  <div class="contact__group">
+                    <div class="contact__text">PR-отдел</div>
+                    <div class="contact__text">E-mail: <a class="contact__mail" href="mailto: pr@spacejam.online"> pr@spacejam.online</a></div>
+                  </div>
+                  <div class="contact__btn"><a class="modal-open btn" href="#modalCons">Консультация</a></div>
+                  <div class="contact__social">
+                    <div>© <span class="copy-year">2020 </span> Все права защищены</div>
+                  </div>
+                </aside>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container"><a class="callback modal-open" href="#modalCallback">
+            <div class="callback__body">
+              <svg class="icon">
+                <use xlink:href="#callback"></use>
+              </svg>
+            </div></a></div>
+      </footer>
+      <script src="js/scripts.min.js"></script>
+      <script src="js/custom.js"></script>
+      <div class="modal disabled" id="modalFinish">
+        <div class="modal__wrap animated">  
+          <div class="close modal-close">x</div>
+          <div class="modal__body">
+            <div class="modal__title">Спасибо!</div>
+            <div class="modal__subtitle">Скоро наш менеджер свяжется с вами.</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal disabled" id="modalCons">
+        <div class="modal__wrap animated"> 
+          <div class="close modal-close">x</div>
+          <div class="modal__body">
+            <div class="modal__header">Получить бесплатную консультацию</div>
+            <div class="modal__group">
+              <div class="modal__img"></div>
+              <div class="modal__form">
+                <div class="modal__about">У вас есть вопросы? Заполните форму и наш менеджер свяжеться з Вами в ближайшее время.  </div>
+                <form>
+                  <!-- Hidden Required Fields-->
+                  <input type="hidden" name="project_name" value="SpaceJam">
+                  <input type="hidden" name="admin_email" value="mail@gmail.com">
+                  <input type="hidden" name="form_subject" value="Бесплатная консультация">
+                  <!-- END Hidden Required Fields-->
+                  <input type="hidden" name="info" value="Бесплатная консультация">
+                  <input class="utm_source hidden" type="hidden" name="utm_source">
+                  <input class="utm_medium hidden" type="hidden" name="utm_medium">
+                  <input class="utm_campaign hidden" type="hidden" name="utm_campaign">
+                  <input class="utm_term hidden" type="hidden" name="utm_term">
+                  <input class="utm_content hidden" type="hidden" name="utm_content">
+                  <div class="form">
+                    <div class="form-line">
+                      <label>
+                        <input class="rfield name-icon" type="text" placeholder="Имя" name="name">
+                      </label>
+                    </div>
+                    <div class="form-line">
+                      <label>
+                        <input class="rfield phone-mask" type="text" placeholder="Телефон" name="phone">
+                      </label>
+                    </div>
+                    <div class="form-line">
+                      <label>
+                        <input class="rfield" type="email" placeholder="Email" name="email">
+                      </label>
+                    </div>
+                    <div class="form-line">
+                      <label>
+                        <textarea class="rfield" name="coment" cols="30" rows="2" placeholder="Комментарий"></textarea>
+                      </label>
+                    </div>
+                    <div class="form-line-btn">
+                      <div class="btn-finish" data-modal="#modalFinish">
+                        <input class="form__btn btn btn--black-hover" type="submit" value="Получить консультацию">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal disabled" id="modalCallback">
+        <div class="modal__wrap animated"> 
+          <div class="close modal-close">x</div>
+          <div class="modal__body">
+            <div class="modal__header">Форма обратной связи</div>
+            <div class="modal__group">
+              <div class="modal__img"></div>
+              <div class="modal__form">
+                <div class="modal__about">Заполните форму и наш менеджер свяжеться з Вами в ближайшее время.   </div>
+                <form>
+                  <!-- Hidden Required Fields-->
+                  <input type="hidden" name="project_name" value="SpaceJam">
+                  <input type="hidden" name="admin_email" value="mail@gmail.com">
+                  <input type="hidden" name="form_subject" value="Форма обратной связи">
+                  <!-- END Hidden Required Fields-->
+                  <input type="hidden" name="info" value="Callback">
+                  <input class="utm_source hidden" type="hidden" name="utm_source">
+                  <input class="utm_medium hidden" type="hidden" name="utm_medium">
+                  <input class="utm_campaign hidden" type="hidden" name="utm_campaign">
+                  <input class="utm_term hidden" type="hidden" name="utm_term">
+                  <input class="utm_content hidden" type="hidden" name="utm_content">
+                  <div class="form">
+                    <div class="form-line">
+                      <label>
+                        <input class="rfield name-icon" type="text" placeholder="Имя" name="name">
+                      </label>
+                    </div>
+                    <div class="form-line">
+                      <label>
+                        <input class="rfield phone-mask" type="text" placeholder="Телефон" name="phone">
+                      </label>
+                    </div>
+                    <div class="form-line-btn">
+                      <div class="btn-finish" data-modal="#modalFinish">
+                        <input class="form__btn btn btn--black-hover" type="submit" value="Отправить">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- END body-->
+</html>

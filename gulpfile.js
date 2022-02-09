@@ -53,9 +53,6 @@ gulp.task('js', function() {
 gulp.task('js', function() {
 	return gulp.src([
 		'src/libs/1.jquery/dist/jquery.min.js',
-		// 'myapp/libs/intl-tel-input/js/utils.js',
-		// 'myapp/libs/intl-tel-input/js/intlTelInput.js',
-		'src/libs/3.mask/jquery.maskedinput.min.js',
 		'src/libs/jquery.marquee.min.js', //бегущая строка
 		// 'src/libs/preload/preload.js',
 		// 'myapp/libs/2.slick/slick.js',

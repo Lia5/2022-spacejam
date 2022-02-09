@@ -22,9 +22,6 @@ section.section.order
                                     input(type="text" placeholder="Имя" name="name").rfield.name-icon
                             .form-line
                                 label
-                                    input(type="text" placeholder="Телефон" name="phone").rfield.phone-mask
-                            .form-line
-                                label
                                     input(type="email" placeholder="Email" name="email").rfield
                             .form-line
                                 label
@@ -43,27 +40,42 @@ section.contact#contact(data-anchor="#contact")
                 .contact__body.animated
                     aside.contact__info
                         h2.title Контакты
-                        .contact__text.contact__adress 
-                            | г. Киев, ул. Чигорина, 18
-                        //-     br
-                        //-     a(href="#modalMap").modal-open.contact__link Детальний маршрут проїзду 
-                        //- .contact__text Графік роботи (Вт-Нд) 
-                        //- .contact__text з 10:00 до 19:00
+                        .contact__group
+                            .contact__text Телефон
+                            a(href="tel:+380443223322") +380 44 322 33 22
+                        .contact__group
+                            .contact__text Email
+                            a(href="mailto:info@spacejam.online").contact__mail info@spacejam.online
+                            .contact__text ул. Чигорина 18, Киев
+                        .contact__group
+                            .contact__text Нужна помощь? 
+                            .contact__text Наша команда поддержки готова помочь вам 24/7.
+                        .contact__group
+                            .contact__text Служба поддержки
+                            .contact__text E-mail: 
+                                a(href="mailto: support@spacejam.online").contact__mail  support@spacejam.online
+                        .contact__group
+                            .contact__text Технические вопросы
+                            .contact__text E-mail: 
+                                a(href="mailto: technical@spacejam.online").contact__mail  technical@spacejam.online
+                        .contact__group
+                            .contact__text PR-отдел
+                            .contact__text E-mail: 
+                                a(href="mailto: pr@spacejam.online").contact__mail  pr@spacejam.online
+
+
                         .contact__btn
                             a(href="#modalCons").modal-open.btn Консультация
-                        .contact__items
-                            a(href="tel:+380") +38 (000) 00 - 00 - 000
-                            a(href="mailto:mail@gmail.com").contact__mail mail@gmail.com
                     
                         .contact__social
-                            div Ми в социальных сетях
-                            .social__items
-                                a(href="#" target="_blank").social__item
-                                    svg.icon
-                                        use(xlink:href="#tg")
-                                a(href="#" target="_blank").social__item
-                                    svg.icon
-                                        use(xlink:href="#skype")
+                            //- div Ми в социальных сетях
+                            //- .social__items
+                            //-     a(href="#" target="_blank").social__item
+                            //-         svg.icon
+                            //-             use(xlink:href="#tg")
+                            //-     a(href="#" target="_blank").social__item
+                            //-         svg.icon
+                            //-             use(xlink:href="#skype")
                             div © 
                                 span.copy-year 2020 
                                 |  Все права защищены
