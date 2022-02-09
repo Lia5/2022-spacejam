@@ -1,36 +1,7 @@
-section.contact#contact(data-anchor="#contact") 
-    .container
-    .container.contact__container
+section.section.order
+    .container.form__container
         .row
-            .col-xl-4.col-lg-4.col-md-6.col-sm-12
-                .contact__body.animated
-                    aside.contact__info
-                        h2.title Контакти
-                        .contact__text.contact__adress 
-                            | г. Киев, ул. Чигорина, 18
-                        //-     br
-                        //-     a(href="#modalMap").modal-open.contact__link Детальний маршрут проїзду 
-                        //- .contact__text Графік роботи (Вт-Нд) 
-                        //- .contact__text з 10:00 до 19:00
-                        .contact__btn
-                            a(href="#modalCons").modal-open.btn Консультация
-                        .contact__items
-                            a(href="tel:+380") +38 (000) 00 - 00 - 000
-                            a(href="mailto:mail@gmail.com").contact__mail mail@gmail.com
-                    
-                        .contact__social
-                            div Ми в социальных сетях
-                            .social__items
-                                a(href="#" target="_blank").social__item
-                                    svg.icon
-                                        use(xlink:href="#tg")
-                                a(href="#" target="_blank").social__item
-                                    svg.icon
-                                        use(xlink:href="#skype")
-                            div © 
-                                span.copy-year 2020 
-                                |  Все права защищены
-            .col-xl-8.col-lg-8.col-md-6.col-sm-12
+            .col-12
                 .contact__form
                     h2.title Заявка на подключение
                     form
@@ -64,3 +35,35 @@ section.contact#contact(data-anchor="#contact")
 
 
 
+
+section.contact#contact(data-anchor="#contact") 
+    .container.contact__container
+        .row
+            .col-xl-4.col-lg-4.col-md-6.col-sm-12
+                .contact__body.animated
+                    aside.contact__info
+                        h2.title Контакты
+                        .contact__text.contact__adress 
+                            | г. Киев, ул. Чигорина, 18
+                        //-     br
+                        //-     a(href="#modalMap").modal-open.contact__link Детальний маршрут проїзду 
+                        //- .contact__text Графік роботи (Вт-Нд) 
+                        //- .contact__text з 10:00 до 19:00
+                        .contact__btn
+                            a(href="#modalCons").modal-open.btn Консультация
+                        .contact__items
+                            a(href="tel:+380") +38 (000) 00 - 00 - 000
+                            a(href="mailto:mail@gmail.com").contact__mail mail@gmail.com
+                    
+                        .contact__social
+                            div Ми в социальных сетях
+                            .social__items
+                                a(href="#" target="_blank").social__item
+                                    svg.icon
+                                        use(xlink:href="#tg")
+                                a(href="#" target="_blank").social__item
+                                    svg.icon
+                                        use(xlink:href="#skype")
+                            div © 
+                                span.copy-year 2020 
+                                |  Все права защищены

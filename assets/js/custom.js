@@ -56,7 +56,10 @@ $(function() {
         var year = new Date().getFullYear()
         $('.copy-year').html(year);
     }
-
+    if($('.partners__items').length) {
+        $('.partners__items').simplemarquee({
+        });
+    }
     if(jQuery('.scroll-to').length) {
         var $page = $('html, body');
         $('.scroll-to[href*="#"]').click(function() {

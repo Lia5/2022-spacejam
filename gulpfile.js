@@ -56,6 +56,7 @@ gulp.task('js', function() {
 		// 'myapp/libs/intl-tel-input/js/utils.js',
 		// 'myapp/libs/intl-tel-input/js/intlTelInput.js',
 		'src/libs/3.mask/jquery.maskedinput.min.js',
+		'src/libs/jquery.simplemarquee.js',
 		// 'src/libs/preload/preload.js',
 		// 'myapp/libs/2.slick/slick.js',
 		// 'myapp/libs/owlcarousel/dist/owlcarousel.js',

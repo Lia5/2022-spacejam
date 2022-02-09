@@ -1,3 +1,6 @@
+.order {
+    background: #f5f5f7;
+}
 .contact {
     position: relative;
     background: linear-gradient(to bottom, #f5f5f7
@@ -41,7 +44,7 @@
     }
     &__info {
         margin-top: 5px;
-        background: #262627;
+        background: #fff;
         padding: 50px 14px 20px;
         @include  media-md {
             padding: 44px 44px 20px;
