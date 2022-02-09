@@ -1,38 +1,3 @@
-section.section.order
-    .container.form__container
-        .row
-            .col-12
-                .contact__form
-                    h2.title Заявка на подключение
-                    form
-                        // Hidden Required Fields
-                        input(type='hidden', name='project_name', value='SpaceJam')
-                        input(type='hidden', name='admin_email', value='mail@gmail.com')
-                        input(type='hidden', name='form_subject', value='Заявка на подключение')
-                        // END Hidden Required Fields
-                        input(type='hidden', name='info', value='Заявка на подключение')
-                        input.utm_source.hidden(type='hidden', name='utm_source')
-                        input.utm_medium.hidden(type='hidden', name='utm_medium')
-                        input.utm_campaign.hidden(type='hidden', name='utm_campaign')
-                        input.utm_term.hidden(type='hidden', name='utm_term')
-                        input.utm_content.hidden(type='hidden', name='utm_content')
-                        .form
-                            .form-line
-                                label
-                                    input(type="text" placeholder="Имя" name="name").rfield.name-icon
-                            .form-line
-                                label
-                                    input(type="email" placeholder="Email" name="email").rfield
-                            .form-line
-                                label
-                                    textarea(name="coment", cols="30", rows="2",placeholder="Комментарий").rfield
-                            .form-line-btn
-                                .btn-finish(data-modal="#modalFinish")
-                                    input(type="submit" value="Отправить").form__btn.btn.btn--black-hover 
-
-
-
-
 section.contact#contact(data-anchor="#contact") 
     .container.contact__container
         .row

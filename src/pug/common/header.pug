@@ -23,12 +23,11 @@ header.header
 					li
 						a(href="#contact" data-menuanchor="#contact").scroll-to Контакты
 					li
-						.lang--mob
-							a(href="index-ru.html").lang__item RU
-							span |
-							a(href="#").lang__item.current UA
-							span |
-							a(href="index-en.html").lang__item EN
+						.header__lang.lang--mob
+							.lang.current RU
+							.lang__list
+								a(href="index-ua.html").lang__item UA
+								a(href="index-en.html").lang__item EN
 		.header__group
 			.header__lk
 				a(href="#").btn 
