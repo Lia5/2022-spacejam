@@ -17,10 +17,10 @@
 
 .numbers__circle {
     width: 280px;
-    height: 280px;
+    padding: 25px;
     border-radius: 50%;
     background: #F5F7F8;
-    border: 1px solid #39BF93;
+    border: 1px solid #939159;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -71,10 +71,10 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    width: 350px;
-    height: 350px;
-    background: linear-gradient(162.13deg, #39BF93 9.37%, #79F2B7 121.2%);
-    border: 1px solid #39BF93;
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(162.13deg, #939159 9.37%, #4b6638 121.2%);
+    border: 1px solid #939159;
     border-radius: 50%;
     z-index: 3;
     -ms-flex-negative: 0;
