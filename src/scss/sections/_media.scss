@@ -13,116 +13,35 @@
         display: -ms-inline-flexbox!important;
         display: inline-flex!important
     }
-    .first {}
-    .numbers {
-        padding: 90px 24px 140px
-    }
-    .numbers__list {
-        margin-top: 60px
-    }
-    .numbers__item,
-    .numbers__list {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column
-    }
-    .numbers__item:after {
-        margin: 30px 0;
-        -webkit-transform: rotate(90deg);
-        transform: rotate(90deg)
-    }
-    .numbers__item-num {
-        font-size: 40px;
-        line-height: 52px
-    }
-    .numbers__item-text {
-        font-size: 20px;
-        line-height: 26px
-    }
-    .numbers__circles {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-direction: column;
-        flex-direction: column
-    }
-    .numbers__circle {
-        -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-        margin: -20px 0 0!important;
-        order: 1;
-        width: 240px
-    }
-    .numbers__circle:first-child {
-        z-index: 3
-    }
-    .numbers__circle:nth-child(2) {
-        z-index: 2
-    }
-    .numbers__circle:nth-child(4) {
-        z-index: 1
-    }
-    .numbers__circle:nth-child(5) {
-        z-index: 0
-    }
-    .numbers__circle-title {
-        font-size: 16px;
-        line-height: 21px
-    }
-    .numbers__circle .separator-line {
-        margin-bottom: 8px;
-        margin-top: 11px
-    }
-    .numbers__circle-num {
-        font-size: 40px;
-        line-height: 52px
-    }
-    .numbers__circle-info {
-        font-size: 16px;
-        line-height: 21px
-    }
-    .numbers__circle-main {
-        -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-        order: 0;
-        width: 240px
-    }
-    .numbers__circle-main-img {
-        height: 103px;
-        width: 108px
-    }
     .coins {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        padding: 100px 0
+        padding: 100px 0;
     }
     .coins__image {
         margin-right: 0;
         max-width: 100%;
-        width: 100%
+        width: 100%;
     }
     .coins__content {
         max-width: 100%;
         padding: 30px 24px 0;
-        width: 100%
+        width: 100%;
     }
     .services {
-        padding: 90px 0 120px
+        padding: 90px 0 120px;
     }
     .services__item {
         -webkit-box-orient: vertical!important;
         -webkit-box-direction: normal!important;
         -ms-flex-direction: column!important;
         flex-direction: column!important;
-        margin-bottom: 120px
+        margin-bottom: 120px;
     }
     .services__item:last-child {
-        margin-bottom: 0
+        margin-bottom: 0;
     }
     .services__item-image {
         -webkit-box-ordinal-group: 1;
@@ -131,32 +50,32 @@
         margin: 0 0 50px!important;
         max-width: 241px;
         order: 0;
-        width: 100%
+        width: 100%;
     }
     .services__item-image-main {
-        height: auto
+        height: auto;
     }
     .services__item-content {
         -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
         order: 1;
         padding: 0 24px;
-        width: 100%
+        width: 100%;
     }
     .services__item-title {
         font-size: 32px;
-        line-height: 42px
+        line-height: 42px;
     }
     .services__item-list-item {
         font-size: 16px;
-        line-height: 24px
+        line-height: 24px;
     }
     .partners {
-        padding: 100px 24px 62px
+        padding: 100px 24px 62px;
     }
     .partners__title {
         font-size: 32px;
-        line-height: 42px
+        line-height: 42px;
     }
     .partners__main {
         -webkit-box-orient: vertical;
@@ -164,11 +83,11 @@
         -ms-flex-direction: column;
         flex-direction: column;
         margin-bottom: 50px;
-        margin-top: 50px
+        margin-top: 50px;
     }
     .partners__main-image {
         margin-bottom: 9px;
-        margin-right: 0
+        margin-right: 0;
     }
     .partners__main-image img {
         max-width: 100%

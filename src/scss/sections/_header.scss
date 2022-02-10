@@ -4,6 +4,7 @@
     align-items: center;
     position: relative;
 }
+
 .header {
     position: fixed;
     width: 100%;
@@ -11,12 +12,11 @@
     align-items: center;
     flex-direction: column;
     z-index: 3;
-    background: #fbfbfd;
     height: 63px;
     z-index: 103;
     transition: 0.5s;
     top: 0;
-    @include  media-md {
+    @include media-md {
         height: auto;
     }
     .container {
@@ -33,7 +33,6 @@
     }
     &__lk {
         font-weight: 700;
-
         a:hover {
             color: $accent;
         }
@@ -41,23 +40,24 @@
             background: transparent;
             box-shadow: none;
             min-width: auto;
-            @include  media-lg {
+            @include media-lg {
                 font-size: 16px;
                 padding: 10px 12px;
                 min-width: 225px;
                 background: $accent;
-            	box-shadow: 0.105px 2.998px 7.5px rgba(0,0,0,0.5);
+                box-shadow: 0.105px 2.998px 7.5px rgba(0, 0, 0, 0.5);
             }
-            &:hover, &:active {
-                @include  media-md {
+            &:hover,
+            &:active {
+                @include media-md {
                     color: #fff;
-                    box-shadow: 0.105px 2.998px 7.5px rgba(0,0,0,0.5);
+                    box-shadow: 0.105px 2.998px 7.5px rgba(0, 0, 0, 0.5);
                     background: #8D8B55;
                 }
             }
         }
         span {
-            @media only screen and (max-width: 991px){
+            @media only screen and (max-width: 991px) {
                 display: none;
             }
         }
@@ -65,11 +65,11 @@
     &__lang {
         display: none;
         position: relative;
-        @include  media-md {
+        @include media-md {
             display: block;
             margin-left: 0;
         }
-        @include  media-lg {
+        @include media-lg {
             margin-left: 20px;
         }
         .current {
@@ -82,40 +82,41 @@
         }
     }
 }
+
 .logo {
     img {
         width: 120px;
         transform: translateY(0) translateX(0) scale(1);
         transition: 0.8s;
-        @include  media-md {
+        @include media-md {
             opacity: 0;
             width: 125px;
             transform: translateY(100px) translateX(100px) scale(2);
         }
-        @include  media-lg {
-
-        }
+        @include media-lg {}
         &.active {
             transform: translateY(0) translateX(0) scale(1);
-            @include  media-md {
+            @include media-md {
                 opacity: 1;
                 transform: translateY(0) translateX(0) scale(1);
             }
         }
     }
 }
+
 .icon-lk {
     display: none;
     width: 29px;
     height: 29px;
     fill: #86868b;
-    @media only screen and (max-width: 991px){
+    @media only screen and (max-width: 991px) {
         display: block;
     }
     &:hover {
         fill: $accent;
     }
 }
+
 .lang {
     cursor: pointer;
     position: relative;
@@ -140,7 +141,6 @@
         &:after {
             border-top: none;
             border-bottom: 5px solid #000;
-            
         }
         &:hover:after {
             border-bottom-color: $accent;
@@ -159,7 +159,7 @@
             color: $accent;
         }
         .lang__item {
-            @media only screen and (max-width: 767px){
+            @media only screen and (max-width: 767px) {
                 padding: 24px 10px;
             }
         }
@@ -198,6 +198,3 @@
         }
     }
 }
-
-
-
