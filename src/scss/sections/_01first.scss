@@ -1,11 +1,10 @@
 .first {
     overflow: hidden;
-    padding: 24px;
     position: relative;
     background: linear-gradient(138.67deg, #fbfbfd 18.68%, rgba(104, 164, 48, 0.7) 90.47%);
     background: linear-gradient(70deg, #fbfbfd 50%, rgba(104, 164, 48, 0.7) 90%);
     @include media-md {
-        padding: 40px 40px 70px;
+        padding: 40px 0 70px;
     }
     .container {
         display: -webkit-box;
