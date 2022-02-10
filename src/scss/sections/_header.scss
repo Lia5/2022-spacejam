@@ -16,6 +16,8 @@
     z-index: 103;
     transition: 0.5s;
     top: 0;
+    background: rgba(255, 255, 255, 0);
+    transition: background 0.5s;
     @include media-md {
         height: auto;
     }
@@ -26,6 +28,12 @@
     }
     &.hide {
         top: -90px;
+    }
+    &.bg {
+        background: rgba(255, 255, 255, 0.9);
+        .menu-toggle .one, .menu-toggle .two, .menu-toggle .three {
+            background: $accent;
+        }
     }
     &__group {
         display: flex;
@@ -108,7 +116,7 @@
     display: none;
     width: 29px;
     height: 29px;
-    fill: #86868b;
+    fill: #000; //#86868b;
     @media only screen and (max-width: 991px) {
         display: block;
     }

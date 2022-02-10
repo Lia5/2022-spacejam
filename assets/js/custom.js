@@ -398,7 +398,7 @@ $(window).scroll(function() {
         // $('.sticky.on').toggleClass('active', st > $('#about').offset().top-300);
 
     }
-    // $('.logo img').toggleClass('active', st > 0);
+    $('.header').toggleClass('bg', st > 100);
     // $('.home__logo').toggleClass('active', st > 0);
     // $('.home__title').toggleClass('active', st > 0);
     var svgImg = $("svg .animated");
