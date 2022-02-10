@@ -34,6 +34,9 @@
         .menu-toggle .one, .menu-toggle .two, .menu-toggle .three {
             background: $accent;
         }
+        .icon-lk {
+            fill: $accent;
+        }
     }
     &__group {
         display: flex;
