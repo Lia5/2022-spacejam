@@ -7,16 +7,13 @@
 }
 
 .numbers__circles {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    @include media-md {}
+    flex-direction: column;
+    @include media-md {
+        flex-direction: row;
+    }
 }
 
 .numbers__circle {
@@ -30,18 +27,9 @@
     border-radius: 50%;
     background: #F5F7F8;
     border: 1px solid #69A430;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     -ms-flex-negative: 0;
     flex-shrink: 0;
@@ -89,8 +77,6 @@
 }
 
 .numbers__circle-main {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,17 +89,17 @@
     z-index: 9;
     -webkit-box-ordinal-group: 1;
     -ms-flex-order: 0;
+    width: 250px;
+    height: 250px;
     @include media-md {
         -webkit-box-ordinal-group: initial;
         -ms-flex-order: initial;
-        width: 250px;
-        height: 250px;
     }
 }
 
 .numbers__circle-main-img {
-    height: 103px;
-    width: 108px;
+    height: 101px;
+    width: 198px;
     @include media-md {
         width: 159px;
         height: 150px;
@@ -153,14 +139,8 @@
 }
 
 .numbers__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     margin-top: 60px;
     flex-direction: column;
@@ -171,11 +151,7 @@
 }
 
 .numbers__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     flex-direction: column;
     @include media-md {
@@ -184,15 +160,8 @@
 }
 
 .numbers__item-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     @include media-md {}
 }
