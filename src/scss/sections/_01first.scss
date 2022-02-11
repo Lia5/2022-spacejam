@@ -1,17 +1,13 @@
 .first {
     overflow: hidden;
     position: relative;
-    background: linear-gradient(138.67deg, #fbfbfd 18.68%, rgba(104, 164, 48, 0.7) 90.47%);
-    background: linear-gradient(70deg, #fbfbfd 50%, rgba(104, 164, 48, 0.7) 90%);
+    // background: linear-gradient(70deg, #fbfbfd 50%, rgba(104, 164, 48, 0.7) 90%);
     @include media-md {
         padding: 40px 0 70px;
     }
     .container {
         display: flex;
         flex-direction: column
-    }
-    .section__bottom-line {
-        background-image: url(../img/first/Line1.png)
     }
     &__banner {
         flex-direction: column;

