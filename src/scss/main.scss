@@ -41,11 +41,11 @@ body {
     }
     input,
     textarea {
-        border-radius: 10px;
         width: 100%;
         border: 1px solid transparent;
+		border-bottom: 1px solid #1d1d1f;
         outline: none;
-        background: #fff;
+        background: transparent;
         padding: 11px 9px;
         &:focus:required:invalid {
             border-color: red;
@@ -158,14 +158,14 @@ li {
 
 .title,
 h2 {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 700;
     text-align: center;
     margin-top: 0;
     margin-bottom: 30px;
     text-transform: uppercase;
     @include media-md {
-        font-size: 24px;
+        font-size: 30px;
     }
 }
 
