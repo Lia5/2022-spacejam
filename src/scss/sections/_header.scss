@@ -88,8 +88,9 @@
                 color: $accent;
             }
         }
-        &.lang-mob {
+        &.lang--mob {
             display: block;
+            width: 50px;
         }
     }
 }
