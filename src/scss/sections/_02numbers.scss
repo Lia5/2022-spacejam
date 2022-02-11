@@ -12,6 +12,8 @@
     justify-content: center;
     flex-direction: column;
     @include media-md {
+    }
+    @include media-xl {
         flex-direction: row;
     }
 }
@@ -37,6 +39,23 @@
         order: initial;
         width: 280px;
         height: 280px;
+    }
+    @include media-xl {
+        width: 220px;
+        height: 220px;
+        padding: 16px;
+    }
+    @include media-xxl {
+        width: 280px;
+        height: 280px;
+        padding: 25px;
+    }
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        @include media-md {
+            flex-direction: row;
+        }
     }
 }
 
@@ -95,6 +114,14 @@
         -webkit-box-ordinal-group: initial;
         -ms-flex-order: initial;
     }
+    @include media-xl {
+        width: 220px;
+        height: 220px;
+    }
+    @include media-xxl {
+        width: 250px;
+        height: 250px;
+    }
 }
 
 .numbers__circle-main-img {
@@ -116,11 +143,20 @@
         font-size: 18px;
         line-height: 24px;
     }
+    @include media-xl {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    @include media-xxl {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
 }
 
 .numbers__circle .separator-line {
     margin-top: 24px;
-    margin-bottom: 8px
+    margin-bottom: 8px;
 }
 
 .numbers__circle-num {
@@ -128,6 +164,15 @@
     font-size: 40px;
     line-height: 52px;
     @include media-md {
+        font-size: 50px;
+        line-height: 65px;
+    }
+    @include media-xl {   
+        font-size: 41px;
+        line-height: 54px;
+    
+    }
+    @include media-xxl {
         font-size: 50px;
         line-height: 65px;
     }
@@ -174,12 +219,13 @@
 .numbers__item:after {
     content: "";
     display: block;
-    background-image: url(../img/home/arrow-right.svg);
+    background-image: url("../img/numbers/5462473dd79c8c968ccc.svg");
     width: 60px;
     height: 44px;
     margin: 30px 0;
     transform: rotate(90deg);
     @include media-md {
+        transform: rotate(0);
         margin: 0 50px;
     }
 }
@@ -200,6 +246,10 @@
     font-size: 20px;
     line-height: 26px;
     @include media-md {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    @include media-xl {
         font-size: 30px;
         line-height: 39px;
     }

@@ -355,6 +355,7 @@
         </section>
         <section class="section numbers">
             <div class="numbers__circles">
+              <div class="numbers__circle-wrap">
                 <div class="numbers__circle wow fadeInRight" data-delay="600" data-wow-delay="1.2s" data-wow-duration="0.3s" style="visibility: visible; animation-duration: 0.3s; animation-delay: 1.2s; animation-name: fadeInRight; transform: translateX(0px);">
                     <div class="numbers__circle-title">Платежи on-line</div>
                     <div class="numbers__circle-num">20</div>
@@ -365,8 +366,13 @@
                     <div class="numbers__circle-num">30 000+</div>
                     <div class="numbers__circle-info">точек приёма</div>
                 </div>
+              </div>
+              <div class="numbers__circle-wrap">
                 <div class="numbers__circle-main wow zoomInDown" data-wow-duration="0.4s" style="visibility: visible; animation-duration: 0.4s; animation-name: zoomInDown; transform: scale(1);">
-                    <img class="numbers__circle-main-img" src="img/logo.svg" alt="logo" class="active"></div>
+                    <img class="numbers__circle-main-img" src="img/logo.svg" alt="logo" class="active">
+                </div>
+              </div>
+              <div class="numbers__circle-wrap">
                 <div class="numbers__circle wow fadeInLeft" data-delay="0" data-wow-delay="0.6s" data-wow-duration="0.3s" style="visibility: visible; animation-duration: 0.3s; animation-delay: 0.6s; animation-name: fadeInLeft; transform: translateX(0px);">
                     <div class="numbers__circle-title">Кредитных продуктов<br>для ваших клиентов</div>
                     <div class="numbers__circle-num">5</div>
@@ -377,26 +383,29 @@
                     <div class="numbers__circle-num">50</div>
                     <div class="numbers__circle-info">партнеров</div>
                 </div>
+              </div>
             </div>
-            <div class="numbers__list">
-                <div class="numbers__item">
-                    <div class="numbers__item-content">
-                        <div class="numbers__item-num" data-end-value="1">1</div>
-                        <div class="numbers__item-text">интеграция</div>
-                    </div>
-                </div>
-                <div class="numbers__item">
-                    <div class="numbers__item-content">
-                        <div class="numbers__item-num" data-end-value="4">4</div>
-                        <div class="numbers__item-text">сервисы</div>
-                    </div>
-                </div>
-                <div class="numbers__item">
-                    <div class="numbers__item-content">
-                        <div class="numbers__item-num" data-end-value="50000">50000</div>
-                        <div class="numbers__item-text">партнеров для вашего бізнеса</div>
-                    </div>
-                </div>
+            <div class="container">
+              <div class="numbers__list">
+                  <div class="numbers__item">
+                      <div class="numbers__item-content">
+                          <div class="numbers__item-num" data-end-value="1">1</div>
+                          <div class="numbers__item-text">интеграция</div>
+                      </div>
+                  </div>
+                  <div class="numbers__item">
+                      <div class="numbers__item-content">
+                          <div class="numbers__item-num" data-end-value="4">4</div>
+                          <div class="numbers__item-text">сервисы</div>
+                      </div>
+                  </div>
+                  <div class="numbers__item">
+                      <div class="numbers__item-content">
+                          <div class="numbers__item-num" data-end-value="50000">50000</div>
+                          <div class="numbers__item-text">партнеров для вашего бізнеса</div>
+                      </div>
+                  </div>
+              </div>
             </div>
         </section>
         <!-- <section class="home" id="first" data-anchor="#first">
@@ -495,11 +504,11 @@
         </section>
         <section class="contact" id="contact" data-anchor="#contact">
             <div class="container contact__container">
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                        <div class="contact__body animated">
-                            <aside class="contact__info">
-                                <h2 class="title">Контакты</h2>
+                <div class="contact__body animated">
+                    <aside class="contact__info">
+                        <h2 class="title">Контакты</h2>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                 <div class="contact__group">
                                     <div class="contact__text">Телефон</div><a href="tel:+380443223322">+380 44 322 33 22</a>
                                 </div>
@@ -511,6 +520,8 @@
                                     <div class="contact__text">Нужна помощь? </div>
                                     <div class="contact__text">Наша команда поддержки готова помочь вам 24/7.</div>
                                 </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                 <div class="contact__group">
                                     <div class="contact__text">Служба поддержки</div>
                                     <div class="contact__text">E-mail: <a class="contact__mail" href="mailto: support@spacejam.online"> support@spacejam.online</a></div>
@@ -523,13 +534,17 @@
                                     <div class="contact__text">PR-отдел</div>
                                     <div class="contact__text">E-mail: <a class="contact__mail" href="mailto: pr@spacejam.online"> pr@spacejam.online</a></div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
                                 <div class="contact__btn"><a class="modal-open btn" href="#modalCons">Консультация</a></div>
                                 <div class="contact__social">
-                                    <div>© <span class="copy-year">2020 </span> Все права защищены</div>
+                                    <div>© <span class="copy-year">2022 </span> Все права защищены</div>
                                 </div>
-                            </aside>
+                            </div>
                         </div>
-                    </div>
+                    </aside>
                 </div>
             </div>
         </section>
