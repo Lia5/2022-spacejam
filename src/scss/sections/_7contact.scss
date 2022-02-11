@@ -3,18 +3,19 @@
 }
 .contact {
     position: relative;
-    background: linear-gradient(to bottom, #f5f5f7
-    50%, rgba(104, 164, 48, 0.7) 90%);
+    background: linear-gradient(to bottom, #f5f5f7 50%, rgba(104, 164, 48, 0.7) 90%);
     padding: 60px 0 0;
-    @include  media-md {
-        background: linear-gradient(195deg, #f5f5f7 30%, rgba(104, 164, 48, 0.7) 90%);
+    @include media-sm {
         padding: 60px 0 30px;
+    }
+    @include media-md {
+        background: linear-gradient(195deg, #f5f5f7 30%, rgba(104, 164, 48, 0.7) 90%);
     }
     .title {
         margin-bottom: 37px;
     }
     &__container {
-        @media only screen and (max-width: 767px){
+        @media only screen and (max-width: 767px) {
             padding: 0;
             .row {
                 margin: 0;
@@ -37,7 +38,7 @@
             z-index: -1;
             left: 0;
             border-radius: 10px;
-            @include  media-md {
+            @include media-md {
                 left: -5px;
             }
         }
@@ -58,22 +59,22 @@
     &__top {
         margin-bottom: 20px;
         text-align: center;
-        @include  media-md {
+        @include media-md {
             text-align: left;
         }
-        
+
     }
     &__info {
         margin-top: 5px;
         background: #fff;
         padding: 50px 14px 20px;
-        @include  media-md {
+        @include media-md {
             padding: 44px 44px 20px;
         }
-        @include  media-lg {
+        @include media-lg {
             padding: 44px 24px 20px;
         }
-        @include  media-xl {
+        @include media-xl {
             padding: 44px 44px 20px;
         }
     }
@@ -81,7 +82,7 @@
         font-size: 18px;
         margin: 42px 0 34px;
         text-align: center;
-        @include  media-md {
+        @include media-md {
             margin-bottom: 40px;
 
         }
@@ -100,7 +101,7 @@
         text-decoration: underline;
         margin-top: 10px;
         margin-bottom: 10px;
-        @include  media-md {
+        @include media-md {
             margin-top: 0;
             margin-bottom: 0;
 
@@ -117,7 +118,7 @@
     &__btn {
         margin-top: 35px;
         letter-spacing: -0.5px;
-        @include  media-md {
+        @include media-md {
             margin-top: 30px;
         }
         .btn {
@@ -125,7 +126,7 @@
             &.btn--white {
                 padding: 14px 41px;
             }
-            @include  media-md {
+            @include media-md {
                 min-width: auto;
                 width: 100%;
             }
@@ -146,31 +147,31 @@
             height: 100%;
         }
         &:hover {
-                fill: $accent;
+            fill: $accent;
         }
     }
     &__form {
         width: 100%;
         margin: 0 auto;
         padding: 50px 0 20px;
-        @include  media-md {
+        @include media-md {
             max-width: 465px;
             padding: 44px 0 20px;
         }
         .form {
             max-width: 200px;
             margin: 0 auto;
-            @include  media-md {
+            @include media-md {
                 max-width: 465px;
             }
         }
         .btn {
 
-            @include  media-md {
+            @include media-md {
                 min-width: auto;
                 width: 100%;
             }
-            @include  media-lg {
+            @include media-lg {
                 margin-left: auto;
                 margin-right: auto;
             }
@@ -183,7 +184,7 @@
         justify-content: center;
         margin-top: 14px;
         margin-bottom: 28px;
-        @include  media-md {
+        @include media-md {
             margin-top: 15px;
             margin-bottom: 18px;
         }
@@ -194,20 +195,20 @@
 }
 @keyframes fadeInUp {
     from {
-      opacity: 0;
-      transform: translate3d(0, 100%, 0);
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
     }
-  
+
     to {
-      opacity: 1;
-      transform: translate3d(0, 0, 0);
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
     }
-  }
-  
-  .fadeInUp {
+}
+
+.fadeInUp {
     animation-name: fadeInUp;
     animation-fill-mode: both;
-  }
-  .leaflet-top.leaflet-left {
-      z-index: 1;
-  }
+}
+.leaflet-top.leaflet-left {
+    z-index: 1;
+}
