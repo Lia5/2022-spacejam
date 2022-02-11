@@ -5,10 +5,10 @@
     position: relative;
     background: linear-gradient(to bottom, #f5f5f7
     50%, rgba(104, 164, 48, 0.7) 90%);
-    padding: 60px 0 30px;
+    padding: 60px 0 0;
     @include  media-md {
-        background: linear-gradient(195deg, #f5f5f7 30%, rgba(104, 164, 48, 0.7) 90%)
-
+        background: linear-gradient(195deg, #f5f5f7 30%, rgba(104, 164, 48, 0.7) 90%);
+        padding: 60px 0 30px;
     }
     .title {
         margin-bottom: 37px;
