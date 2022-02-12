@@ -86,8 +86,15 @@
         .current {
             &:hover {
                 color: $accent;
+            }
+        }
+        &.lang--mob {
+            display: block;
+            width: 45px;
+            @include media-md {
                 display: none;
             }
+            
         }
     }
 }
@@ -156,7 +163,9 @@
         }
     }
     &--mob {
-        display: none;
+        @include media-md {
+            display: none;
+        }
         // @media only screen and (max-width: 767px){
         //     display: flex;
         // }
