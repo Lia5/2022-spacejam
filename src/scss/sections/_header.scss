@@ -16,7 +16,8 @@
     z-index: 103;
     transition: 0.5s;
     top: 0;
-    background: rgba(255, 255, 255, 0);
+    // background: rgba(255, 255, 255, 0);
+    background: rgba(255, 255, 255, 0.9);
     transition: background 0.5s;
     @include media-md {
         height: auto;
@@ -29,15 +30,14 @@
     &.hide {
         top: -90px;
     }
-    &.bg {
-        background: rgba(255, 255, 255, 0.9);
-        .menu-toggle .one, .menu-toggle .two, .menu-toggle .three {
-            background: $accent;
-        }
-        .icon-lk {
-            fill: $accent;
-        }
-    }
+    // &.bg {
+    //     .menu-toggle .one, .menu-toggle .two, .menu-toggle .three {
+    //         background: $accent;
+    //     }
+    //     .icon-lk {
+    //         fill: $accent;
+    //     }
+    // }
     &__group {
         display: flex;
         align-items: center;
@@ -63,7 +63,7 @@
                 @include media-md {
                     color: #fff;
                     box-shadow: 0.105px 2.998px 7.5px rgba(0, 0, 0, 0.5);
-                    background: #8D8B55;
+                    background: #08633a;
                 }
             }
         }
@@ -86,12 +86,6 @@
         .current {
             &:hover {
                 color: $accent;
-            }
-        }
-        &.lang--mob {
-            display: block;
-            width: 50px;
-            @include  media-md {
                 display: none;
             }
         }
@@ -123,7 +117,7 @@
     display: none;
     width: 29px;
     height: 29px;
-    fill: #fff; //#86868b;
+    fill: $accent; //#86868b;
     @media only screen and (max-width: 991px) {
         display: block;
     }
