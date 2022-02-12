@@ -1,0 +1,189 @@
+.first {
+    overflow: hidden;
+    position: relative;
+    // background: linear-gradient(70deg, #fbfbfd 50%, rgba(104, 164, 48, 0.7) 90%);
+    @include media-md {
+        padding: 40px 0 70px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column
+    }
+    &__banner {
+        flex-direction: column;
+        margin-top: 50px;
+        flex-grow: 1;
+        display: flex;
+        align-items: stretch;
+        @include media-md {
+            flex-direction: row;
+        }
+    }
+    &__banner-text {
+        margin: 0 0 30px;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 60px 0;
+        @include media-md {
+            padding: 120px 0;
+            width: 43%; 
+            margin-right: 35px;
+            margin-bottom: 0;
+        }
+    }
+    &__banner-text-title {
+        font-size: 32px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        font-weight: bold;
+        @include media-lg {
+            font-size: 50px;
+            line-height: 65px;
+            margin-bottom: 30px;
+        }
+    }
+    &__banner-text-content {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: normal;
+        @include media-md {
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+    &__banner-text .separator-line {
+        display: none;
+        @include media-md {
+            display: block;
+            margin-top: 60px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    &__banner-image {
+        position: relative;
+        width: 100%;
+        height: 344px;
+        max-width: 359px;
+        margin: 0 auto;
+        @include media-md {
+            max-width: none;
+            margin: initial;
+            width: calc(57% - 35px);
+            height: 688px;
+        }
+        img {
+            width: 90%;
+        }
+    }
+    &__banner-image-phone {
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        max-width: 111px;
+        z-index: 4;
+        @include media-md {
+            bottom: 79px;
+            max-width: 211px;
+        }
+    }
+    &__banner-image-ipad {
+        position: absolute;
+        left: 36px;
+        top: 23px;
+        max-width: 311px;
+        z-index: 2;
+        @include media-md {
+            left: 72px;
+            top: 46px;
+            max-width: 622px;
+        }
+    }
+    &__banner-image-heart {
+        position: absolute;
+        left: 138px;
+        top: 0;
+        max-width: 72px;
+        z-index: 3;
+        @include media-md {
+            left: 279px;
+            top: 0;
+            max-width: 144px;
+        }
+    }
+    &__banner-image-star {
+        position: absolute;
+        left: 82px;
+        bottom: 130px;
+        max-width: 67px;
+        z-index: 5;
+        @include media-md {
+            left: 164px;
+            bottom: 261px;
+            max-width: 135px;
+        }
+    }
+    &__banner-image-coin-1 {
+        position: absolute;
+        top: 32px;
+        left: 250px;
+        max-width: 39px;
+        z-index: 1;
+        @include media-md {
+            top: 64px;
+            left: 500px;
+            max-width: 78px;
+        }
+    }
+    &__banner-image-coin-2 {
+        position: absolute;
+        left: 217px;
+        bottom: 174px;
+        max-width: 20px;
+        z-index: 3;
+        @include media-md {
+            left: 434px;
+            bottom: 348px;
+            max-width: 41px;
+        }
+    }
+    &__banner-image-coin-3 {
+        position: absolute;
+        max-width: 60px;
+        top: 207px;
+        left: 225px;
+        z-index: 3;
+        @include media-md {
+            max-width: 121px;
+            top: 415px;
+            left: 450px;
+        }
+    }
+    &__banner-image-coin-4 {
+        position: absolute;
+        max-width: 40px;
+        bottom: 18px;
+        left: 43px;
+        z-index: 5;
+        @include media-md {
+            max-width: 80px;
+            bottom: 37px;
+            left: 87px;
+        }
+    }
+    &__banner-image-remote-control {
+        position: absolute;
+        max-width: 125px;
+        bottom: 0;
+        left: 132px;
+        z-index: 5;
+        @include media-md {
+            max-width: 251px;
+            bottom: 0;
+            left: 264px;
+        }
+    }
+}

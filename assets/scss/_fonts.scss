@@ -1,0 +1,4 @@
+@import "_mixins/font-face";
+
+@include font-face("PTSansCaption", "../fonts/PTSans-Caption/PTSans-Caption", 400);
+@include font-face("PTSansCaption", "../fonts/PTSans-CaptionBold/PTSans-CaptionBold", 700);

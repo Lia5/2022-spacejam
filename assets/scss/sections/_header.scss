@@ -1,0 +1,212 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 3;
+    height: 63px;
+    z-index: 103;
+    transition: 0.5s;
+    top: 0;
+    background: rgba(255, 255, 255, 0);
+    transition: background 0.5s;
+    @include media-md {
+        height: auto;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    &.hide {
+        top: -90px;
+    }
+    &.bg {
+        background: rgba(255, 255, 255, 0.9);
+        .menu-toggle .one, .menu-toggle .two, .menu-toggle .three {
+            background: $accent;
+        }
+        .icon-lk {
+            fill: $accent;
+        }
+    }
+    &__group {
+        display: flex;
+        align-items: center;
+    }
+    &__lk {
+        font-weight: 700;
+        a:hover {
+            color: $accent;
+        }
+        .btn {
+            background: transparent;
+            box-shadow: none;
+            min-width: auto;
+            @include media-lg {
+                font-size: 16px;
+                padding: 10px 12px;
+                min-width: 225px;
+                background: $accent;
+                box-shadow: 0.105px 2.998px 7.5px rgba(0, 0, 0, 0.5);
+            }
+            &:hover,
+            &:active {
+                @include media-md {
+                    color: #fff;
+                    box-shadow: 0.105px 2.998px 7.5px rgba(0, 0, 0, 0.5);
+                    background: #8D8B55;
+                }
+            }
+        }
+        span {
+            @media only screen and (max-width: 991px) {
+                display: none;
+            }
+        }
+    }
+    &__lang {
+        display: none;
+        position: relative;
+        @include media-md {
+            display: block;
+            margin-left: 0;
+        }
+        @include media-lg {
+            margin-left: 20px;
+        }
+        .current {
+            &:hover {
+                color: $accent;
+            }
+        }
+        &.lang--mob {
+            display: block;
+            width: 50px;
+        }
+    }
+}
+
+.logo {
+    img {
+        width: 120px;
+        transform: translateY(0) translateX(0) scale(1);
+        transition: 0.8s;
+        @include media-md {
+            opacity: 0;
+            width: 125px;
+            transform: translateY(100px) translateX(100px) scale(2);
+        }
+        @include media-lg {}
+        &.active {
+            transform: translateY(0) translateX(0) scale(1);
+            @include media-md {
+                opacity: 1;
+                transform: translateY(0) translateX(0) scale(1);
+            }
+        }
+    }
+}
+
+.icon-lk {
+    display: none;
+    width: 29px;
+    height: 29px;
+    fill: #000; //#86868b;
+    @media only screen and (max-width: 991px) {
+        display: block;
+    }
+    &:hover {
+        fill: $accent;
+    }
+}
+
+.lang {
+    cursor: pointer;
+    position: relative;
+    padding: 10px;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 16px;
+        right: -5px;
+        width: 0;
+        height: 0;
+        border: 5px solid #86868b;
+        border-bottom: none;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        // transition: 0.3s;
+    }
+    &:hover:after {
+        border-top-color: $accent;
+    }
+    &.active {
+        &:after {
+            border-top: none;
+            border-bottom: 5px solid #000;
+        }
+        &:hover:after {
+            border-bottom-color: $accent;
+        }
+    }
+    &--mob {
+        display: none;
+        // @media only screen and (max-width: 767px){
+        //     display: flex;
+        // }
+        span {
+            color: $accent;
+            padding: 24px 10px;
+        }
+        .current {
+            color: $accent;
+        }
+        .lang__item {
+            @media only screen and (max-width: 767px) {
+                padding: 24px 10px;
+            }
+        }
+    }
+    &__list {
+        display: none;
+        background: #fff;
+        position: absolute;
+        top: 35px;
+        left: 0;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0.105px 1px 4.5px rgba(0, 0, 0, 0.29);
+        &.active {
+            display: block;
+        }
+    }
+    &__item {
+        display: block;
+        padding: 10px;
+        &+.lang__item {
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 50%;
+                margin-right: -50%;
+                transform: translate(-50%, 0);
+                width: 80%;
+                height: 1px;
+                background: $accent;
+            }
+        }
+        &:hover {
+            color: $accent;
+        }
+    }
+}
