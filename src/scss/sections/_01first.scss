@@ -1,7 +1,7 @@
 .first {
     overflow: hidden;
     position: relative;
-    background: rgb(11, 134, 79);
+    background: $accent;
     color: #fff;
     z-index: 1;
     @include media-md {
@@ -10,7 +10,7 @@
     // background: linear-gradient(70deg, #fbfbfd 50%, rgba(104, 164, 48, 0.7) 90%);
     @include media-md {
         padding: 40px 0 70px;
-        background: linear-gradient(70deg, #fbfbfd 50%, rgba(4, 52, 31, 0.7) 90%);
+        background: linear-gradient(70deg, #fbfbfd 50%, rgba(141, 139, 85, 0.7) 90%);
     }
     &:before {
         content: "";
