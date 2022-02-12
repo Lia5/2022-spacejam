@@ -91,6 +91,9 @@
         &.lang--mob {
             display: block;
             width: 50px;
+            @include  media-md {
+                display: none;
+            }
         }
     }
 }

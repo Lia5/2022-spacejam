@@ -4,6 +4,7 @@
     // background: linear-gradient(70deg, #fbfbfd 50%, rgba(104, 164, 48, 0.7) 90%);
     @include media-md {
         padding: 40px 0 70px;
+        background: linear-gradient(70deg, #fbfbfd 50%, rgba(104, 164, 48, 0.7) 90%);
     }
     .container {
         display: flex;
